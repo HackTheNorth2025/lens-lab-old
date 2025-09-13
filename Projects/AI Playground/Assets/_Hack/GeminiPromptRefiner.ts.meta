@@ -1,0 +1,79 @@
+- !<AssetImportMetadata/e2f83b70-7b80-4052-a5a6-31950701a37f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3a235bfd-9155-48eb-a2c4-e188fbec03cd
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3a235bfd-9155-48eb-a2c4-e188fbec03cd
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> f2b5958b-d79c-4a94-82a2-acde120bf4ff
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/f2b5958b-d79c-4a94-82a2-acde120bf4ff>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: edad9c53-3e42-4a06-a1e6-65556f75b45a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    analyzeButton: false
+    detailLevel: false
+    imageDisplay: false
+    includeLighting: false
+    includeMaterials: false
+    includeTechnicalSpecs: false
+    inputTexture: false
+    modelStyle: false
+    promptDisplay: false
+    verboseLogging: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - inputTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      analyzeButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      imageDisplay: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      modelStyle: realistic
+      detailLevel: !<float> 4.000000
+      includeTechnicalSpecs: true
+      includeMaterials: true
+      includeLighting: true
+      promptDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      verboseLogging: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"Gemini Image-to-3D Prompt Refiner"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Input Configuration"}'
+    - '// @input Asset.Texture inputTexture {"hint":"Drag and drop a texture here to analyze"}'
+    - '// @input AssignableType analyzeButton {"hint":"Button to trigger the image analysis"}'
+    - '// @input Component.Image imageDisplay {"hint":"Optional: Display the input image for reference"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Prompt Generation Settings"}'
+    - '// @input string modelStyle = "realistic" {"hint":"Style preference for 3D model generation", "widget":"combobox", "values":[{"label":"Realistic", "value":"realistic"}, {"label":"Cartoon/Animated", "value":"cartoon"}, {"label":"Low Poly", "value":"lowpoly"}, {"label":"Stylized", "value":"stylized"}, {"label":"Photorealistic", "value":"photorealistic"}]}'
+    - '// @input float detailLevel = 4 {"hint":"Detail level for the generated prompt", "widget":"slider", "min":1, "max":5, "step":1}'
+    - '// @input bool includeTechnicalSpecs = true {"hint":"Include technical specifications in the prompt"}'
+    - '// @input bool includeMaterials = true {"hint":"Include material and texture descriptions"}'
+    - '// @input bool includeLighting = true {"hint":"Include lighting and environment context"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Output Configuration"}'
+    - '// @input Component.Text promptDisplay {"hint":"Text component to display the generated prompt"}'
+    - '// @input bool verboseLogging = true {"hint":"Show detailed analysis in console logs"}'
+    - '// @ui {"widget":"group_end"}'
