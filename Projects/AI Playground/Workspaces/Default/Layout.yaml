@@ -14,8 +14,8 @@ dock:
             type: section
             current: 0
         sizes:
-          - 452
-          - 261
+          - 465
+          - 248
         type: splitter
         orientation: vertical
       - items:
@@ -30,8 +30,8 @@ dock:
             type: section
             current: 0
         sizes:
-          - 472
-          - 241
+          - 333
+          - 380
         type: splitter
         orientation: vertical
       - items:
@@ -48,8 +48,8 @@ dock:
         current: 0
     sizes:
       - 290
-      - 260
-      - 390
-      - 603
+      - 185
+      - 631
+      - 437
     type: splitter
     orientation: horizontal

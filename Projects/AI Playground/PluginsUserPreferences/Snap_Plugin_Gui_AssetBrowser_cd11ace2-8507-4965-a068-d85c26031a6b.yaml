@@ -1,8 +1,10 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 714
+    size: 718
     values:
+      - ""
+      - Image.mat
       - LSTween.lspkg
       - LSTween.lspkg/Examples
       - LSTween.lspkg/Examples/Assets
@@ -717,4 +719,6 @@ CollapsedEntities:
       - Visuals/Textures/NoInternetAlert.png
       - Visuals/Textures/NoInternetWarning.mat
       - Visuals/image_unlit.ss_graph
+      - _Hack/GeminiPromptRefiner.ts
+      - _Hack/original.jpg
   options: 4

@@ -1,5 +1,5 @@
 ExternalSources:
   type: "std::map<Es::Uuid, Es::Path>"
   value:
-    []
+    - 775bb2b9-ad97-4e54-934c-9cf4e0057e0a: /Users/jtam/Desktop/original.jpg
   options: 4
