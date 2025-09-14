@@ -27,14 +27,16 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    imageButton: false
+    analyzeButton: false
+    analyzeTextButton: false
+    endControllerTemplate: false
     imageDisplay: false
     inputTexture: false
     modelStyle: false
+    promptDisplay: false
+    singleInstance: false
     snap3DFactory: false
     targetAnchor: false
-    textButton: false
-    toolTip: false
     verboseLogging: false
   ScriptTypesHidden:
     {}
@@ -42,14 +44,16 @@
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
     - inputTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
-      imageButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
-      textButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      analyzeButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      analyzeTextButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       imageDisplay: !<reference.Image> 00000000-0000-0000-0000-000000000000
-      toolTip: !<reference.Text> 00000000-0000-0000-0000-000000000000
       modelStyle: realistic
+      promptDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
       verboseLogging: true
       snap3DFactory: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
       targetAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      endControllerTemplate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      singleInstance: true
   ScriptTypes:
     -
       {}
@@ -59,10 +63,9 @@
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Input Configuration"}'
     - // @input Asset.Texture inputTexture
-    - '// @input AssignableType imageButton {"hint":"Button to trigger the image analysis"}'
-    - '// @input AssignableType_1 textButton {"hint":"Button to trigger the text analysis"}'
+    - '// @input AssignableType analyzeButton {"hint":"Button to trigger the image analysis"}'
+    - '// @input AssignableType_1 analyzeTextButton {"hint":"Button to trigger the text analysis"}'
     - '// @input Component.Image imageDisplay {"hint":"Optional: Display the input image for reference"}'
-    - '// @input Component.Text toolTip {"hint":"Welcome / intro text that will be cleared after start"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Prompt Generation Settings"}'
@@ -70,6 +73,7 @@
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Output Configuration"}'
+    - // @input Component.Text promptDisplay
     - // @input bool verboseLogging = true
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
@@ -77,3 +81,5 @@
     - // @input AssignableType_2 snap3DFactory
     - // @input SceneObject targetAnchor
     - '// @ui {"widget":"group_end"}'
+    - '// @input SceneObject endControllerTemplate {"hint":"Template SceneObject that provides the End Controller Service (will be cloned on restart). Leave empty if already present in scene."}'
+    - '// @input bool singleInstance = true {"hint":"If true, will only instantiate start controller once even across re-instantiations (tracked globally)."}'
