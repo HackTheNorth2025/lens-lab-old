@@ -3931,7 +3931,7 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    []
+    - !<own> a5f401c0-ff6a-46d1-b13f-71899b187044
   Components:
     - !<own> ccde828a-40d8-43c1-8b5f-affe3945273d
 - !<ScriptComponent/9221f19e-818a-4fb1-aaeb-dba1b9713120>
@@ -4389,6 +4389,21 @@
     - !<own> 37c09a20-1dca-42ab-ba85-f358a9d2dc02
     - !<own> bf9ebde7-66ad-47b1-b5be-1088eb5c6ca0
     - !<own> 0f9f5f86-ea5c-4dd9-a8c4-4fe5eb82365d
+- !<SceneObject/a5f401c0-ff6a-46d1-b13f-71899b187044>
+  PrefabRemaps:
+    []
+  Name: TargetPosition
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    []
 - !<SceneObject/a702aad2-e621-42d4-afd6-3946f6425bb8>
   PrefabRemaps:
     []
@@ -5597,6 +5612,7 @@
     {}
   ScriptInputs:
     "":
+      inputTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
       analyzeButton: !<MappingBased.AssignableType> 2755eaaf-ef93-45dc-b460-e2b3836517a4
       imageDisplay: !<reference.Image> 030a9acb-4fca-4732-bb78-9c78865a9269
       modelStyle: realistic
@@ -5606,6 +5622,8 @@
       includeLighting: false
       promptDisplay: !<reference.Text> 9b4695ca-d297-4911-8f79-a762991dafc8
       verboseLogging: true
+      snap3DFactory: !<MappingBased.AssignableType_1> 4aa30a81-2a3a-4c2d-a9fa-30d11d91584f
+      targetAnchor: !<reference.SceneObject> a5f401c0-ff6a-46d1-b13f-71899b187044
   ScriptTypes:
     "":
       {}

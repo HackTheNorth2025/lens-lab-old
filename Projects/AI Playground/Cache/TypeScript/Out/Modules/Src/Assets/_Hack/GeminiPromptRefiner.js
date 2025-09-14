@@ -13,6 +13,9 @@ const Gemini_1 = require("Remote Service Gateway.lspkg/HostedExternal/Gemini");
 const NativeLogger_1 = require("SpectaclesInteractionKit.lspkg/Utils/NativeLogger");
 const log = new NativeLogger_1.default("GeminiPromptRefiner");
 let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent {
+    // ----------------------------------------------------------------------
+    // Lifecycle
+    // ----------------------------------------------------------------------
     onAwake() {
         this.createEvent("OnStartEvent").bind(() => {
             this.initializeButton();
@@ -33,6 +36,9 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
             this.imageDisplay.mainMaterial.mainPass.baseTex = this.inputTexture;
         }
     }
+    // ----------------------------------------------------------------------
+    // Main Flow
+    // ----------------------------------------------------------------------
     analyzeImage() {
         if (this.isProcessing) {
             log.w("Already processing an image. Please wait...");
@@ -45,36 +51,20 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
         }
         this.isProcessing = true;
         this.updatePromptDisplay("Analyzing image...");
-        if (this.verboseLogging) {
-            log.d("Starting image analysis with Gemini...");
-            log.d(`Model style: ${this.modelStyle}`);
-            log.d(`Detail level: ${this.detailLevel}`);
-        }
         this.generatePromptFromImage();
     }
     generatePromptFromImage() {
-        // Convert texture to base64 for Gemini API
         this.textureToBase64(this.inputTexture)
             .then((base64Image) => {
-            // Create the Gemini request
             const request = {
                 model: "gemini-2.0-flash",
                 type: "generateContent",
                 body: {
                     contents: [
+                        { parts: [{ text: this.createSystemPrompt() }], role: "model" },
                         {
                             parts: [
-                                {
-                                    text: this.createSystemPrompt(),
-                                },
-                            ],
-                            role: "model",
-                        },
-                        {
-                            parts: [
-                                {
-                                    text: this.createUserPrompt(),
-                                },
+                                { text: this.createUserPrompt() },
                                 {
                                     inlineData: {
                                         mimeType: "image/jpeg",
@@ -92,18 +82,39 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
                     },
                 },
             };
-            // Send request to Gemini
             return Gemini_1.Gemini.models(request);
         })
             .then((response) => {
             this.handleGeminiResponse(response);
         })
             .catch((error) => {
-            log.e("Failed to convert texture to base64 or process with Gemini: " + error);
-            this.updatePromptDisplay("Error: Failed to process image - " + error);
+            log.e("Gemini process failed: " + error);
+            this.updatePromptDisplay("Error: " + error);
             this.isProcessing = false;
         });
     }
+    handleGeminiResponse(response) {
+        if (response.candidates && response.candidates.length > 0) {
+            const generatedPrompt = response.candidates[0].content.parts[0].text;
+            this.updatePromptDisplay(generatedPrompt);
+            // 🔹 Create the 3D object
+            if (this.snap3DFactory && this.targetAnchor) {
+                const worldPos = this.targetAnchor.getTransform().getWorldPosition();
+                this.snap3DFactory
+                    .createInteractable3DObject(generatedPrompt, worldPos)
+                    .then((msg) => print("3D Object Created: " + msg))
+                    .catch((err) => print("3D Object Error: " + err));
+            }
+        }
+        else {
+            log.e("No valid response from Gemini");
+            this.updatePromptDisplay("Error: No response from Gemini");
+        }
+        this.isProcessing = false;
+    }
+    // ----------------------------------------------------------------------
+    // Prompt Helpers
+    // ----------------------------------------------------------------------
     createSystemPrompt() {
         const styleInstructions = this.getStyleInstructions();
         const detailInstructions = this.getDetailInstructions();
@@ -160,97 +171,23 @@ Focus on creating a prompt that would result in a high-quality 3D model that clo
         };
         return detailMap[this.detailLevel] || detailMap[4];
     }
-    handleGeminiResponse(response) {
-        if (response.candidates && response.candidates.length > 0) {
-            const generatedPrompt = response.candidates[0].content.parts[0].text;
-            if (this.verboseLogging) {
-                log.d("=== GEMINI RESPONSE ===");
-                log.d("Generated Prompt:");
-                log.d(generatedPrompt);
-                log.d("=======================");
-            }
-            this.updatePromptDisplay(generatedPrompt);
-            this.logPromptDetails(generatedPrompt);
-        }
-        else {
-            log.e("No valid response from Gemini");
-            this.updatePromptDisplay("Error: No response from Gemini");
-        }
-        this.isProcessing = false;
-    }
-    handleGeminiError(error) {
-        log.e("Gemini API Error: " + error);
-        this.updatePromptDisplay("Error: " + error);
-        this.isProcessing = false;
-    }
+    // ----------------------------------------------------------------------
+    // Utilities
+    // ----------------------------------------------------------------------
     updatePromptDisplay(text) {
         if (this.promptDisplay) {
             this.promptDisplay.text = text;
         }
-        // Also log to console
-        print("=== GENERATED 3D PROMPT ===");
-        print(text);
-        print("===========================");
-    }
-    logPromptDetails(prompt) {
-        if (this.verboseLogging) {
-            const wordCount = prompt.split(" ").length;
-            const charCount = prompt.length;
-            log.d(`Prompt Statistics:`);
-            log.d(`- Word count: ${wordCount}`);
-            log.d(`- Character count: ${charCount}`);
-            log.d(`- Style: ${this.modelStyle}`);
-            log.d(`- Detail level: ${this.detailLevel}`);
-            log.d(`- Technical specs included: ${this.includeTechnicalSpecs}`);
-            log.d(`- Materials included: ${this.includeMaterials}`);
-            log.d(`- Lighting included: ${this.includeLighting}`);
-        }
+        print("=== GENERATED 3D PROMPT ===\n" + text + "\n===========================");
     }
     textureToBase64(texture) {
         return new Promise((resolve, reject) => {
             if (!texture) {
-                log.e("No texture provided for base64 conversion");
                 reject("No texture provided");
                 return;
             }
-            log.d("Converting texture to base64...");
-            // Use the proper Lens Studio Base64 API
-            Base64.encodeTextureAsync(texture, (encodedString) => {
-                log.d("Texture successfully encoded to base64");
-                resolve(encodedString);
-            }, () => {
-                log.e("Error encoding texture to base64");
-                reject("Failed to encode texture");
-            }, CompressionQuality.HighQuality, EncodingType.Jpg);
+            Base64.encodeTextureAsync(texture, (encodedString) => resolve(encodedString), () => reject("Failed to encode texture"), CompressionQuality.HighQuality, EncodingType.Jpg);
         });
-    }
-    // Public method to manually trigger analysis (useful for testing)
-    analyzeImageManually() {
-        this.analyzeImage();
-    }
-    // Public method to update settings
-    updateSettings(style, detail, technical, materials, lighting) {
-        this.modelStyle = style;
-        this.detailLevel = detail;
-        this.includeTechnicalSpecs = technical;
-        this.includeMaterials = materials;
-        this.includeLighting = lighting;
-        log.d("Settings updated:");
-        log.d(`- Style: ${style}`);
-        log.d(`- Detail: ${detail}`);
-        log.d(`- Technical: ${technical}`);
-        log.d(`- Materials: ${materials}`);
-        log.d(`- Lighting: ${lighting}`);
-    }
-    // Public method to get current settings
-    getCurrentSettings() {
-        return {
-            modelStyle: this.modelStyle,
-            detailLevel: this.detailLevel,
-            includeTechnicalSpecs: this.includeTechnicalSpecs,
-            includeMaterials: this.includeMaterials,
-            includeLighting: this.includeLighting,
-        };
     }
     __initialize() {
         super.__initialize();

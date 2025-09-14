@@ -33,15 +33,19 @@
     includeLighting: false
     includeMaterials: false
     includeTechnicalSpecs: false
+    inputTexture: false
     modelStyle: false
     promptDisplay: false
+    snap3DFactory: false
+    targetAnchor: false
     verboseLogging: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - analyzeButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+    - inputTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      analyzeButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       imageDisplay: !<reference.Image> 00000000-0000-0000-0000-000000000000
       modelStyle: realistic
       detailLevel: !<float> 4.000000
@@ -50,6 +54,8 @@
       includeLighting: true
       promptDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
       verboseLogging: true
+      snap3DFactory: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      targetAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -58,19 +64,25 @@
     - '// @ui {"widget":"label", "label":"Gemini Image-to-3D Prompt Refiner"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Input Configuration"}'
+    - // @input Asset.Texture inputTexture
     - '// @input AssignableType analyzeButton {"hint":"Button to trigger the image analysis"}'
     - '// @input Component.Image imageDisplay {"hint":"Optional: Display the input image for reference"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Prompt Generation Settings"}'
-    - '// @input string modelStyle = "realistic" {"hint":"Style preference for 3D model generation", "widget":"combobox", "values":[{"label":"Realistic", "value":"realistic"}, {"label":"Cartoon/Animated", "value":"cartoon"}, {"label":"Low Poly", "value":"lowpoly"}, {"label":"Stylized", "value":"stylized"}, {"label":"Photorealistic", "value":"photorealistic"}]}'
-    - '// @input float detailLevel = 4 {"hint":"Detail level for the generated prompt", "widget":"slider", "min":1, "max":5, "step":1}'
-    - '// @input bool includeTechnicalSpecs = true {"hint":"Include technical specifications in the prompt"}'
-    - '// @input bool includeMaterials = true {"hint":"Include material and texture descriptions"}'
-    - '// @input bool includeLighting = true {"hint":"Include lighting and environment context"}'
+    - '// @input string modelStyle = "realistic" {"widget":"combobox", "values":[{"label":"Realistic", "value":"realistic"}, {"label":"Cartoon/Animated", "value":"cartoon"}, {"label":"Low Poly", "value":"lowpoly"}, {"label":"Stylized", "value":"stylized"}, {"label":"Photorealistic", "value":"photorealistic"}]}'
+    - // @input float detailLevel = 4
+    - // @input bool includeTechnicalSpecs = true
+    - // @input bool includeMaterials = true
+    - // @input bool includeLighting = true
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Output Configuration"}'
-    - '// @input Component.Text promptDisplay {"hint":"Text component to display the generated prompt"}'
-    - '// @input bool verboseLogging = true {"hint":"Show detailed analysis in console logs"}'
+    - // @input Component.Text promptDisplay
+    - // @input bool verboseLogging = true
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"3D Object Generation"}'
+    - // @input AssignableType_1 snap3DFactory
+    - // @input SceneObject targetAnchor
     - '// @ui {"widget":"group_end"}'

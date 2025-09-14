@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 722
+    size: 718
     values:
       - ""
       - Entry/PinchDetector.ts
@@ -34,7 +34,6 @@ CollapsedEntities:
       - LSTween.lspkg/package.native
       - Modules/Camera Module.cameraModule
       - Modules/Internet Module.internetModule
-      - Prefabs
       - Prefabs/Snap3DInteractable.prefab
       - Remote Service Gateway.lspkg/Helpers
       - Remote Service Gateway.lspkg/Helpers/AudioProcessor.ts
@@ -96,9 +95,7 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Event.ts
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
-      - Render
       - Scene.scene
-      - Scripts
       - Scripts/AIAssistantUIBridge.ts
       - Scripts/APIKeyHint.ts
       - Scripts/ASRQueryController.ts
@@ -694,7 +691,6 @@ CollapsedEntities:
       - SpectaclesInteractionKitExamples.lspkg/Examples/SIK Examples.prefab
       - SpectaclesInteractionKitExamples.lspkg/package.native
       - SpectaclesInteractionKitExamples.lspkg/package_dependencies.json
-      - Visuals
       - Visuals/AI Visual
       - Visuals/AI Visual/Animations
       - Visuals/AI Visual/Animations/BaseLayer.animationMixerLayer

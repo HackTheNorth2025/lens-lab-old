@@ -1453,7 +1453,7 @@
             mValues:
               []
         ShaderType: Mesh3d
-      ShaderPath: c8626c9d-0b14-c6ba-2b61-f3dd91f47ccb/6ad7f61ce6f556ca415c78d04664e267/Data/.hidden/0a4e116/Lightbake.001.glsl
+      ShaderPath: c8626c9d-0b14-c6ba-2b61-f3dd91f47ccb/6ad7f61ce6f556ca415c78d04664e267/Data/.hidden/6533ae0/Lightbake.001.glsl
       Defines:
         []
       Properties:

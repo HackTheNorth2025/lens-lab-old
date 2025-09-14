@@ -114,7 +114,7 @@
             mValues:
               []
         ShaderType: Mesh3d
-      ShaderPath: 3e5e13c0-f698-c5d9-a9f3-99bbd05cb4cc/ee41f7df630ffc94465d4a7450ad6a08/Data/0a4e116/Simple Diffuse.glsl
+      ShaderPath: 3e5e13c0-f698-c5d9-a9f3-99bbd05cb4cc/ee41f7df630ffc94465d4a7450ad6a08/Data/6533ae0/Simple Diffuse.glsl
       Defines:
         []
       Properties:

@@ -140,7 +140,7 @@
             mValues:
               []
         ShaderType: Mesh3d
-      ShaderPath: 03d34105-ef8a-38b9-d4b6-51ec7fbddd2d/9662e97cb361cb113faa7b197722ea22/Data/0a4e116/NormalBasedTargetOutline.glsl
+      ShaderPath: 03d34105-ef8a-38b9-d4b6-51ec7fbddd2d/9662e97cb361cb113faa7b197722ea22/Data/6533ae0/NormalBasedTargetOutline.glsl
       Defines:
         []
       Properties:

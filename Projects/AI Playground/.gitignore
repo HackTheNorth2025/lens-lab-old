@@ -1,3 +1,7 @@
+Cache/*
+*.lock
+*.cache
+
 # Shipped by Lens Studio
 
 # The lines below are automatically generated and updated by Lens Studio.
