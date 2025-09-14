@@ -28,6 +28,7 @@
   MaxVisibility: Editable
   ScriptInputsHidden:
     imageButton: false
+    imageDisplay: false
     pinchServiceTemplate: false
     singleInstance: false
     startButton: false
@@ -43,6 +44,7 @@
     - startButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       imageButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       textButton: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      imageDisplay: !<reference.Image> 00000000-0000-0000-0000-000000000000
       welcomeText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       toolTip: !<reference.Text> 00000000-0000-0000-0000-000000000000
       pinchServiceTemplate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -59,8 +61,9 @@
     - '// @input AssignableType startButton {"hint":"Button the user presses to start the experience"}'
     - '// @input AssignableType_1 imageButton {"hint":"Button for image interaction"}'
     - '// @input AssignableType_2 textButton {"hint":"Button for text interaction"}'
+    - // @input Component.Image imageDisplay
     - '// @input Component.Text welcomeText {"hint":"Welcome / intro text that will be cleared after start"}'
-    - '// @input Component.Text toolTip {"hint":"Welcome / intro text that will be cleared after start"}'
+    - // @input Component.Text toolTip
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Pinch Service"}'
