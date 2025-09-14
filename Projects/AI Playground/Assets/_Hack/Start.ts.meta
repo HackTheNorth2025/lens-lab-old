@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/e676c281-146e-4e14-809b-c989dec2e4cc>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a060551e-a0e9-418a-9359-2b18630f4ef9
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a060551e-a0e9-418a-9359-2b18630f4ef9
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1d680224-d01e-4cc8-9afd-d064493692d1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1d680224-d01e-4cc8-9afd-d064493692d1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: a83a2ccb-04ca-4631-b70c-0b7340be1d15
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    startButton: false
+    welcomeText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - startButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      welcomeText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType startButton
+    - // @input Component.Text welcomeText

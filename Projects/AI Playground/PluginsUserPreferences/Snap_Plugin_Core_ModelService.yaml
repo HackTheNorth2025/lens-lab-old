@@ -1,7 +1,8 @@
 ExternalSources:
-  type: "std::map<class Es::Uuid,class Es::Path,struct std::less<class Es::Uuid>,class std::allocator<struct std::pair<class Es::Uuid const ,class Es::Path> > >"
+  type: "std::map<Es::Uuid, Es::Path>"
   value:
     - 1a876848-30a4-4408-b1dc-8aa742ce6ca8: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts"
+    - 2362bb36-3701-4236-ad13-b9c68e8b0428: /private/var/folders/xb/h5ctffzs53n8ty9v1mn0tfgh0000gn/T/LensStudio_UCWhJL/Scene Manager.lspkg
     - 3f07220f-b3b0-4ef2-bfc8-d077599f888e: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts"
     - 775bb2b9-ad97-4e54-934c-9cf4e0057e0a: /Users/jtam/Desktop/original.jpg
   options: 4

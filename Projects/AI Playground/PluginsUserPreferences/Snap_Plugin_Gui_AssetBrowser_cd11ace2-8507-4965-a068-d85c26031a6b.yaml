@@ -1,8 +1,9 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 720
+    size: 731
     values:
+      - ""
       - Entry
       - Entry/PinchDetector.ts
       - Entry/PinchService.ts
@@ -37,15 +38,25 @@ CollapsedEntities:
       - Modules/Internet Module.internetModule
       - Prefabs
       - Prefabs/Snap3DInteractable.prefab
+      - Remote Service Gateway.lspkg
       - Remote Service Gateway.lspkg/Helpers
       - Remote Service Gateway.lspkg/Helpers/AudioProcessor.ts
       - Remote Service Gateway.lspkg/Helpers/DynamicAudioOutput.ts
       - Remote Service Gateway.lspkg/Helpers/MicrophoneRecorder.ts
       - Remote Service Gateway.lspkg/Helpers/VideoController.ts
+      - Remote Service Gateway.lspkg/HostedExternal
+      - Remote Service Gateway.lspkg/HostedExternal/Examples
+      - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleGeminiCalls.ts
+      - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleGeminiLive.ts
       - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleOAICalls.ts
       - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleOAIRealtime.ts
+      - Remote Service Gateway.lspkg/HostedExternal/Gemini.ts
+      - Remote Service Gateway.lspkg/HostedExternal/GeminiTypes.ts
       - Remote Service Gateway.lspkg/HostedExternal/OpenAI.ts
       - Remote Service Gateway.lspkg/HostedExternal/OpenAITypes.ts
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/Gemini_Live.remoteServiceModule
+      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/Gemini_Sync.remoteServiceModule
       - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Completions.remoteServiceModule
       - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Generations.remoteServiceModule
       - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Realtime.remoteServiceModule
@@ -95,10 +106,20 @@ CollapsedEntities:
       - Render/Echopark.hdr/Diffuse
       - Render/Echopark.hdr/Specular
       - Render/Render Target.renderTarget
+      - Scene Manager.lspkg
+      - Scene Manager.lspkg/SceneManager1.2.7__PLACE_IN_SCENE.prefab
+      - Scene Manager.lspkg/Scripts
+      - Scene Manager.lspkg/Scripts/SceneManaerSplashScreenHandler.js
+      - Scene Manager.lspkg/Scripts/SceneManaerStartSceneLoader.js
+      - Scene Manager.lspkg/Scripts/SceneManager.js
+      - Scene Manager.lspkg/Scripts/SceneManagerModule.js
+      - Scene Manager.lspkg/package.native
       - Scene.scene
+      - Scripts
       - Scripts/AIAssistantUIBridge.ts
       - Scripts/APIKeyHint.ts
       - Scripts/ASRQueryController.ts
+      - Scripts/GeminiAssistant.ts
       - Scripts/ImageGenerator.ts
       - Scripts/InteractableImageGenerator.ts
       - Scripts/InteractableSnap3DGenerator.ts
@@ -107,12 +128,8 @@ CollapsedEntities:
       - Scripts/Snap3DInteractable.ts
       - Scripts/Snap3DInteractableFactory.ts
       - Scripts/SphereController.ts
-      - SpectaclesInteractionKit.lspkg
-      - SpectaclesInteractionKit.lspkg/Assets
-      - SpectaclesInteractionKit.lspkg/Assets/Audio
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerEndAudioTrack.wav
-      - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerStartAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Materials
       - SpectaclesInteractionKit.lspkg/Assets/Materials/BaseHandVisualsMaterials
       - SpectaclesInteractionKit.lspkg/Assets/Materials/BaseHandVisualsMaterials/FingerHighlightLeft.mat
@@ -516,9 +533,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/VersionNumber.ts
       - SpectaclesInteractionKit.lspkg/package.native
       - SpectaclesInteractionKit.lspkg/tsconfig.json
-      - SpectaclesInteractionKitExamples.lspkg
-      - SpectaclesInteractionKitExamples.lspkg/Examples
-      - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/Materials
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/Materials/Icons
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/Materials/Icons/ModernBodyTube_icon.mat
@@ -650,16 +664,12 @@ CollapsedEntities:
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/Textures/ScrollViewThumbnails/nose-cone_rocket-A.png
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/Textures/ScrollViewThumbnails/nose-cone_rocket-B.png
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/Textures/ScrollViewThumbnails/nose-cone_rocket-C.png
-      - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Landing
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Landing/Bones_clouds_ANIM_mat_landing.mat
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Landing/Bones_clouds_material_landing_.ss_graph
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Landing/CloudsLanding.animationAsset
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Landing/line1.mesh
-      - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Start
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Start/Bones_clouds_ANIM_mat_takeoff.mat
-      - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Start/Bones_clouds_material_start_.ss_graph
-      - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Start/CloudsStart.animationAsset
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Clouds Start/line1.mesh
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Custom Mesh Emitter
       - SpectaclesInteractionKitExamples.lspkg/Examples/RocketWorkshop/VFX/Custom Mesh Emitter/Custom Mesh Emitter.prefab
@@ -722,5 +732,6 @@ CollapsedEntities:
       - Visuals/image_unlit.ss_graph
       - _Hack
       - _Hack/GeminiPromptRefiner.ts
+      - _Hack/Start.ts
       - _Hack/original.jpg
   options: 4
