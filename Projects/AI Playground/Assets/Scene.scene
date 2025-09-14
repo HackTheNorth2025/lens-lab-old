@@ -906,7 +906,7 @@
   PrefabRemaps:
     []
   Name: Behavior
-  Enabled: true
+  Enabled: false
   ScriptAsset: !<reference> 6723cdea-93b3-4652-812f-c9c36a7ddb0f
   ScriptInputsDefault:
     touchEventEventType: true
@@ -3520,7 +3520,7 @@
   PrefabRemaps:
     []
   Name: Audio
-  Enabled: false
+  Enabled: true
   AudioTrack: !<reference> ed748731-33a7-467b-a69b-8a766dceeb2f
   EnableAutoplayLoop: true
   Volume: 0.800000
@@ -3609,7 +3609,7 @@
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -24.133379, y: 35.213268, z: -165.200623}
-    Rotation: {x: -0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 50.000000, y: 50.000000, z: 50.000000}
     HasSegmentScaleCompensation: false
   Children:

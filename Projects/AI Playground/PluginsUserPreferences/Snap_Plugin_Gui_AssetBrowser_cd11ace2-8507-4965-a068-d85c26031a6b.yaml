@@ -1,11 +1,9 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 744
+    size: 741
     values:
       - ""
-      - Behavior 2.lsc
-      - Behavior.lsc
       - Entry
       - Entry/PinchDetector.ts
       - Entry/PinchService.ts
@@ -746,5 +744,4 @@ CollapsedEntities:
       - _Hack/original.jpg
       - bubble_pop.mp3
       - bugbite.mp3
-      - interaction.mp3
   options: 4

@@ -1,14 +1,11 @@
 ExternalSources:
   type: "std::map<Es::Uuid, Es::Path>"
   value:
-    - 066e233e-dce6-4712-a639-409aeacdb21a: /Users/tyrellhaywood/Documents/sounds/interaction.mp3
     - 1a876848-30a4-4408-b1dc-8aa742ce6ca8: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts"
     - 1bd39dd1-10af-4dea-b6dd-c91ef2a1ff2a: /Users/tyrellhaywood/Documents/sounds/bubble_pop.mp3
     - 2362bb36-3701-4236-ad13-b9c68e8b0428: /private/var/folders/xb/h5ctffzs53n8ty9v1mn0tfgh0000gn/T/LensStudio_UCWhJL/Scene Manager.lspkg
     - 3f07220f-b3b0-4ef2-bfc8-d077599f888e: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts"
-    - 453fe0d9-5ae8-42f1-ac6a-0724c728d084: /Applications/Lens Studio.app/Contents/JsPlugins/HelperScriptsRegistry/Assets/Scripts/Resources/Behavior.lsc
     - 775bb2b9-ad97-4e54-934c-9cf4e0057e0a: /Users/jtam/Desktop/original.jpg
     - 90576299-69ca-46d8-b861-cbbde3819f24: /private/var/folders/xb/h5ctffzs53n8ty9v1mn0tfgh0000gn/T/LensStudio_XjsKDr/Sparkles VFX.lspkg
     - a5a335b7-8df8-494d-890b-f7d2a3d655b9: /Users/tyrellhaywood/Documents/sounds/bugbite.mp3
-    - b4f6edf0-d841-4e37-acd6-3ff4f98476e3: /Applications/Lens Studio.app/Contents/JsPlugins/HelperScriptsRegistry/Assets/Scripts/Resources/Behavior.lsc
   options: 4
