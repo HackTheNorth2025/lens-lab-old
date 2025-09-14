@@ -39,8 +39,9 @@ export class EndSceneController extends BaseScriptComponent {
   @hint("Enable verbose logging")
   private verboseLogging: boolean = true;
   @ui.group_end
-  private defaultMeetFriendText: string = "";
-  private defaultInteractWithModelInstructionsText: string = "";
+  private defaultMeetFriendText: string = "Meet your new friend!";
+  private defaultInteractWithModelInstructionsText: string =
+    "Pinch with one finger to move,\npinch with two fingers to resize";
   private hasStarted: boolean = false;
   private spawnedStartController: SceneObject = null;
 
@@ -48,7 +49,7 @@ export class EndSceneController extends BaseScriptComponent {
     this.createEvent("OnStartEvent").bind(() => {
       this.captureDefaultState();
       this.initializeButton();
-      this.resetUI();
+      this.startUI();
       if (this.verboseLogging) {
         log.i("3D model scene initialized");
       }
@@ -171,7 +172,7 @@ export class EndSceneController extends BaseScriptComponent {
   // UI Helpers
   // ----------------------------------------------------------------------
 
-  private resetUI() {
+  private startUI() {
     this.hasStarted = false;
     if (this.meetFriendText) {
       this.meetFriendText.text = this.defaultMeetFriendText;
