@@ -21,6 +21,7 @@ export class EndSceneController extends BaseScriptComponent {
   private interactWithModelInstructionsText: Text;
   @ui.group_end
   @ui.separator
+  @ui.group_start("Start Controller")
   @input
   @hint(
     "Template SceneObject that provides the Start Controller Service (will be cloned on restart). Leave empty if already present in scene."

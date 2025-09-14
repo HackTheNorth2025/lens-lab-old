@@ -56,7 +56,24 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   snap3DFactory: Snap3DInteractableFactory;
   @input targetAnchor: SceneObject;
   @ui.group_end
+
+  // Inputs for end scene controller
+  @ui.separator
+  @ui.group_start("End controller")
+  @input
+  @hint(
+    "Template SceneObject that provides the end controller (will be cloned on start). Leave empty if already present in scene."
+  )
+  private endControllerTemplate: SceneObject;
+
+  @input
+  @hint(
+    "If true, will only instantiate pinch service once even across re-instantiations (tracked globally)."
+  )
+  private singleInstance: boolean = true;
+  @ui.group_end
   public isProcessing: boolean = false;
+  private spawnedEndController: SceneObject = null;
 
   // ----------------------------------------------------------------------
   // Lifecycle
@@ -179,12 +196,68 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
           .createInteractable3DObject(generatedPrompt, worldPos)
           .then((msg) => print("3D Object Created: " + msg))
           .catch((err) => print("3D Object Error: " + err));
+        this.handleFinishedGeneration();
       }
     } else {
       log.e("No valid response from Gemini");
       // this.updatePromptDisplay("Error: No response from Gemini");
     }
     this.isProcessing = false;
+  }
+
+  // END SCENE
+  private handleFinishedGeneration() {
+    this.instantiateEndController();
+
+    // TODO: Other button/text interactions (hide image/text buttons)
+  }
+
+  private instantiateEndController() {
+    if (this.singleInstance && (global as any).__EndControllerSpawned) {
+      if (this.verboseLogging) {
+        log.i("End controller already instantiated (global). Skipping.");
+      }
+      return;
+    }
+
+    if (!this.endControllerTemplate) {
+      if (this.verboseLogging) {
+        log.w(
+          "No end controller provided. Assuming service already exists in scene."
+        );
+      }
+      (global as any).__EndControllerSpawned = true;
+      return;
+    }
+
+    try {
+      // Clone / copy hierarchy (API may vary; fallback strategies)
+      if ((this.endControllerTemplate as any).copyWholeHierarchy) {
+        this.spawnedEndController = (
+          this.endControllerTemplate as any
+        ).copyWholeHierarchy();
+      } else if ((this.endControllerTemplate as any).clone) {
+        this.spawnedEndController = (this.endControllerTemplate as any).clone();
+      } else {
+        // Manual create + component copy not implemented; log fallback
+        this.spawnedEndController = this.endControllerTemplate;
+        if (this.verboseLogging) {
+          log.w("Could not clone end controller; using original reference.");
+        }
+      }
+
+      if (this.spawnedEndController) {
+        this.spawnedEndController.enabled = true;
+        (global as any).__EndControllerSpawned = true;
+        if (this.verboseLogging) {
+          log.i("ENd controller instantiated.");
+        }
+      } else {
+        log.e("Failed to instantiate end controller (null result).");
+      }
+    } catch (e) {
+      log.e("Error instantiating end controller: " + e);
+    }
   }
 
   // ----------------------------------------------------------------------

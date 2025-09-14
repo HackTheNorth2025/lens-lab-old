@@ -34,6 +34,11 @@ function checkUndefined(property, showIfData){
 // @input AssignableType_2 snap3DFactory
 // @input SceneObject targetAnchor
 // @ui {"widget":"group_end"}
+// @ui {"widget":"separator"}
+// @ui {"widget":"group_start", "label":"End controller"}
+// @input SceneObject endControllerTemplate {"hint":"Template SceneObject that provides the end controller (will be cloned on start). Leave empty if already present in scene."}
+// @input bool singleInstance = true {"hint":"If true, will only instantiate pinch service once even across re-instantiations (tracked globally)."}
+// @ui {"widget":"group_end"}
 var scriptPrototype = Object.getPrototypeOf(script);
 if (!global.BaseScriptComponent){
    function BaseScriptComponent(){}
@@ -57,6 +62,8 @@ awakeEvent.bind(() => {
     checkUndefined("verboseLogging", []);
     checkUndefined("snap3DFactory", []);
     checkUndefined("targetAnchor", []);
+    checkUndefined("endControllerTemplate", []);
+    checkUndefined("singleInstance", []);
     if (script.onAwake) {
        script.onAwake();
     }
