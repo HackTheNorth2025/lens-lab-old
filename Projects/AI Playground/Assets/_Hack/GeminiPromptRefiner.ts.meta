@@ -31,10 +31,10 @@
     imageDisplay: false
     inputTexture: false
     modelStyle: false
-    promptDisplay: false
     snap3DFactory: false
     targetAnchor: false
     textButton: false
+    toolTip: false
     verboseLogging: false
   ScriptTypesHidden:
     {}
@@ -45,8 +45,8 @@
       imageButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       textButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
       imageDisplay: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      toolTip: !<reference.Text> 00000000-0000-0000-0000-000000000000
       modelStyle: realistic
-      promptDisplay: !<reference.Text> 00000000-0000-0000-0000-000000000000
       verboseLogging: true
       snap3DFactory: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
       targetAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -62,6 +62,7 @@
     - '// @input AssignableType imageButton {"hint":"Button to trigger the image analysis"}'
     - '// @input AssignableType_1 textButton {"hint":"Button to trigger the text analysis"}'
     - '// @input Component.Image imageDisplay {"hint":"Optional: Display the input image for reference"}'
+    - '// @input Component.Text toolTip {"hint":"Welcome / intro text that will be cleared after start"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Prompt Generation Settings"}'
@@ -69,7 +70,6 @@
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Output Configuration"}'
-    - // @input Component.Text promptDisplay
     - // @input bool verboseLogging = true
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'

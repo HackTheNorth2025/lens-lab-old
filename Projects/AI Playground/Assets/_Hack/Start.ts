@@ -23,6 +23,10 @@ export class StartSceneController extends BaseScriptComponent {
   @input
   @hint("Welcome / intro text that will be cleared after start")
   private welcomeText: Text;
+
+  @input
+  @hint("Welcome / intro text that will be cleared after start")
+  private toolTip: Text;
   @ui.group_end
 
   @ui.separator
@@ -85,6 +89,9 @@ export class StartSceneController extends BaseScriptComponent {
     }
     if (this.textButton && this.textButton.getSceneObject) {
       this.textButton.getSceneObject().enabled = false;
+    }
+    if (this.toolTip) {
+    this.toolTip.enabled = false;
     }
   }
 
@@ -204,6 +211,9 @@ export class StartSceneController extends BaseScriptComponent {
     }
     if (this.textButton && this.textButton.getSceneObject) {
       this.textButton.getSceneObject().enabled = visible;
+    }
+    if (this.toolTip) {
+      this.toolTip.enabled = visible;
     }
   }
 }
