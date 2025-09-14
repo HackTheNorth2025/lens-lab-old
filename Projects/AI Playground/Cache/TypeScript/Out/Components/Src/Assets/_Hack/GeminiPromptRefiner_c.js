@@ -18,6 +18,7 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"group_start", "label":"Input Configuration"}
 // @input Asset.Texture inputTexture
 // @input AssignableType analyzeButton {"hint":"Button to trigger the image analysis"}
+// @input AssignableType_1 analyzeTextButton {"hint":"Button to trigger the text analysis"}
 // @input Component.Image imageDisplay {"hint":"Optional: Display the input image for reference"}
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
@@ -31,7 +32,7 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"3D Object Generation"}
-// @input AssignableType_1 snap3DFactory
+// @input AssignableType_2 snap3DFactory
 // @input SceneObject targetAnchor
 // @ui {"widget":"group_end"}
 var scriptPrototype = Object.getPrototypeOf(script);
@@ -51,6 +52,7 @@ let awakeEvent = script.createEvent("OnAwakeEvent");
 awakeEvent.bind(() => {
     checkUndefined("inputTexture", []);
     checkUndefined("analyzeButton", []);
+    checkUndefined("analyzeTextButton", []);
     checkUndefined("imageDisplay", []);
     checkUndefined("modelStyle", []);
     checkUndefined("promptDisplay", []);

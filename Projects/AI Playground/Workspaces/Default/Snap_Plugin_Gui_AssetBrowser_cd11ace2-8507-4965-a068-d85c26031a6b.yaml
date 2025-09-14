@@ -1,9 +1,9 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 718
+    size: 720
     values:
-      - ""
+      - Entry
       - Entry/PinchDetector.ts
       - Entry/PinchService.ts
       - Image.mat
@@ -32,27 +32,20 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
+      - Modules
       - Modules/Camera Module.cameraModule
       - Modules/Internet Module.internetModule
+      - Prefabs
       - Prefabs/Snap3DInteractable.prefab
       - Remote Service Gateway.lspkg/Helpers
       - Remote Service Gateway.lspkg/Helpers/AudioProcessor.ts
       - Remote Service Gateway.lspkg/Helpers/DynamicAudioOutput.ts
       - Remote Service Gateway.lspkg/Helpers/MicrophoneRecorder.ts
       - Remote Service Gateway.lspkg/Helpers/VideoController.ts
-      - Remote Service Gateway.lspkg/HostedExternal
-      - Remote Service Gateway.lspkg/HostedExternal/Examples
-      - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleGeminiCalls.ts
-      - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleGeminiLive.ts
       - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleOAICalls.ts
       - Remote Service Gateway.lspkg/HostedExternal/Examples/ExampleOAIRealtime.ts
-      - Remote Service Gateway.lspkg/HostedExternal/Gemini.ts
-      - Remote Service Gateway.lspkg/HostedExternal/GeminiTypes.ts
       - Remote Service Gateway.lspkg/HostedExternal/OpenAI.ts
       - Remote Service Gateway.lspkg/HostedExternal/OpenAITypes.ts
-      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules
-      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/Gemini_Live.remoteServiceModule
-      - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/Gemini_Sync.remoteServiceModule
       - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Completions.remoteServiceModule
       - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Generations.remoteServiceModule
       - Remote Service Gateway.lspkg/HostedExternal/RemoteServiceModules/OpenAi_Realtime.remoteServiceModule
@@ -70,6 +63,7 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/HostedSnap/RemoteServiceModules/Snap3D_Submit.remoteServiceModule
       - Remote Service Gateway.lspkg/HostedSnap/Snap3D.ts
       - Remote Service Gateway.lspkg/HostedSnap/Snap3DTypes.ts
+      - Remote Service Gateway.lspkg/Prefabs
       - Remote Service Gateway.lspkg/Prefabs/RemoteServiceGatewayExamples.prefab
       - Remote Service Gateway.lspkg/README.md
       - Remote Service Gateway.lspkg/RemoteServiceGatewayCredentials.ts
@@ -95,6 +89,12 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Event.ts
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
+      - Render
+      - Render/Device Camera Texture.deviceCameraTexture
+      - Render/Echopark.hdr
+      - Render/Echopark.hdr/Diffuse
+      - Render/Echopark.hdr/Specular
+      - Render/Render Target.renderTarget
       - Scene.scene
       - Scripts/AIAssistantUIBridge.ts
       - Scripts/APIKeyHint.ts
@@ -691,6 +691,7 @@ CollapsedEntities:
       - SpectaclesInteractionKitExamples.lspkg/Examples/SIK Examples.prefab
       - SpectaclesInteractionKitExamples.lspkg/package.native
       - SpectaclesInteractionKitExamples.lspkg/package_dependencies.json
+      - Visuals
       - Visuals/AI Visual
       - Visuals/AI Visual/Animations
       - Visuals/AI Visual/Animations/BaseLayer.animationMixerLayer
@@ -719,6 +720,7 @@ CollapsedEntities:
       - Visuals/Textures/NoInternetAlert.png
       - Visuals/Textures/NoInternetWarning.mat
       - Visuals/image_unlit.ss_graph
+      - _Hack
       - _Hack/GeminiPromptRefiner.ts
       - _Hack/original.jpg
   options: 4

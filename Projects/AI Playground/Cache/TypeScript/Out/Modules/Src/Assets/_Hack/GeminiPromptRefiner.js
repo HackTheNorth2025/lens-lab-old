@@ -28,7 +28,14 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
             return;
         }
         this.analyzeButton.onInteractorTriggerStart((event) => {
-            this.analyzeImage();
+            this.analyzeImage(false);
+        });
+        if (!this.analyzeTextButton) {
+            log.e("Text button not assigned!");
+            return;
+        }
+        this.analyzeTextButton.onInteractorTriggerStart((event) => {
+            this.analyzeImage(true);
         });
     }
     setupImageDisplay() {
@@ -39,9 +46,9 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
     // ----------------------------------------------------------------------
     // Main Flow
     // ----------------------------------------------------------------------
-    analyzeImage() {
+    analyzeImage(flag) {
         if (this.isProcessing) {
-            log.w("Already processing an image. Please wait...");
+            log.w("Already processing. Please wait...");
             return;
         }
         if (!this.inputTexture) {
@@ -51,9 +58,9 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
         }
         this.isProcessing = true;
         this.updatePromptDisplay("Analyzing image...");
-        this.generatePromptFromImage();
+        this.generatePromptFromImage(flag);
     }
-    generatePromptFromImage() {
+    generatePromptFromImage(flag) {
         this.textureToBase64(this.inputTexture)
             .then((base64Image) => {
             const request = {
@@ -61,7 +68,7 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
                 type: "generateContent",
                 body: {
                     contents: [
-                        { parts: [{ text: this.createSystemPrompt() }], role: "model" },
+                        { parts: [{ text: (flag ? this.createSystemTextPrompt() : this.createSystemPrompt()) }], role: "model" },
                         {
                             parts: [
                                 { text: this.createUserPrompt() },
@@ -131,6 +138,19 @@ Rules:
 
 If you can identify it as a popular cartoon character, just return that character and qualitative descriptions of the character (e.g. color)
 Do NOT describe any objects in the background.`;
+    }
+    createSystemTextPrompt() {
+        return `You are an expert visual tagger and reader. Your task is to analyze an input image and generate a very short list of descriptive keywords or short phrases. 
+        Focus on any text or lettering that you are able to find, especially that of books or articles.
+        You want to create a visualisation of the content of the text, be that a landscape, a scene, or something else like a mathematical formula.
+        This visualisation can be arbitrarily large, including surrounding the user.
+
+Rules:
+- No filler text, no explanations. 
+- Be eloquent and descriptive.
+- Focus on the most important objects, styles, or visual features, including color (for example, a fair day can be described as a blue sky and sunny)
+
+Do NOT describe any objects in the background of the image, but you are allowed to describe background objects in the text itself.`;
     }
     createUserPrompt() {
         return `Analyze this image and output up to 10 keywords or short phrases, comma-separated, that best describe the main subject and style. Style should match: ${this.modelStyle}.`;
