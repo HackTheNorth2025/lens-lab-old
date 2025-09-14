@@ -68,7 +68,16 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
                 type: "generateContent",
                 body: {
                     contents: [
-                        { parts: [{ text: (flag ? this.createSystemTextPrompt() : this.createSystemPrompt()) }], role: "model" },
+                        {
+                            parts: [
+                                {
+                                    text: flag
+                                        ? this.createSystemTextPrompt()
+                                        : this.createSystemPrompt(),
+                                },
+                            ],
+                            role: "model",
+                        },
                         {
                             parts: [
                                 { text: this.createUserPrompt() },

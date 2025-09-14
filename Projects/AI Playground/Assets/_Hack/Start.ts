@@ -21,11 +21,13 @@ export class StartSceneController extends BaseScriptComponent {
   private textButton: Interactable;
 
   @input
+  private imageDisplay: Image;
+
+  @input
   @hint("Welcome / intro text that will be cleared after start")
   private welcomeText: Text;
 
   @input
-  @hint("Welcome / intro text that will be cleared after start")
   private toolTip: Text;
   @ui.group_end
 
@@ -92,6 +94,9 @@ export class StartSceneController extends BaseScriptComponent {
     }
     if (this.toolTip) {
     this.toolTip.enabled = false;
+    }
+    if (this.imageButton) {
+      this.imageButton.enabled = false;
     }
   }
 
@@ -212,8 +217,8 @@ export class StartSceneController extends BaseScriptComponent {
     if (this.textButton && this.textButton.getSceneObject) {
       this.textButton.getSceneObject().enabled = visible;
     }
-    if (this.toolTip) {
-      this.toolTip.enabled = visible;
+    if (this.imageButton) {
+      this.imageButton.enabled = visible;
     }
   }
 }
