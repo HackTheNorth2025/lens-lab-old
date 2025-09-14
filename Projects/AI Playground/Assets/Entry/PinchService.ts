@@ -15,6 +15,9 @@ export class PinchService extends BaseScriptComponent {
     }
     
     async pinchDetected() {
+
+        
+
         if (!this.flag && !this.gemini.isProcessing) {
             print('Pinch received');
             this.flag = true;
