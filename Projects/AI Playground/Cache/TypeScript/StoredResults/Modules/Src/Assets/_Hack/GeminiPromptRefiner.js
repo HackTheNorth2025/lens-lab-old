@@ -23,18 +23,18 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
         });
     }
     initializeButton() {
-        if (!this.analyzeButton) {
+        if (!this.imageButton) {
             log.e("Analyze button not assigned!");
             return;
         }
-        this.analyzeButton.onInteractorTriggerStart((event) => {
+        this.imageButton.onInteractorTriggerStart((event) => {
             this.analyzeImage(false);
         });
-        if (!this.analyzeTextButton) {
+        if (!this.textButton) {
             log.e("Text button not assigned!");
             return;
         }
-        this.analyzeTextButton.onInteractorTriggerStart((event) => {
+        this.textButton.onInteractorTriggerStart((event) => {
             this.analyzeImage(true);
         });
     }

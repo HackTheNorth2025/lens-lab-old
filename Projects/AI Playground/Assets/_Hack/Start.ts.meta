@@ -27,9 +27,9 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    geminiRefiner: false
     pinchServiceTemplate: false
     singleInstance: false
+    startButton: false
     verboseLogging: false
     welcomeText: false
   ScriptTypesHidden:
@@ -37,7 +37,7 @@
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - geminiRefiner: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+    - startButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       welcomeText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       pinchServiceTemplate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       singleInstance: true
@@ -50,7 +50,7 @@
     - '// @ui {"widget":"label", "label":"Start Scene Configuration"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"UI References"}'
-    - '// @input AssignableType geminiRefiner {"hint":"Button the user presses to start the experience"}'
+    - '// @input AssignableType startButton {"hint":"Button the user presses to start the experience"}'
     - '// @input Component.Text welcomeText {"hint":"Welcome / intro text that will be cleared after start"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'

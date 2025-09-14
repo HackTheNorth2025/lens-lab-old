@@ -17,11 +17,11 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
 
   @input
   @hint("Button to trigger the image analysis")
-  private analyzeButton: Interactable;
+  private imageButton: Interactable;
     
   @input
   @hint("Button to trigger the text analysis")
-  private analyzeTextButton: Interactable;
+  private textButton: Interactable;
 
   @input
   @hint("Optional: Display the input image for reference")
@@ -70,18 +70,18 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   }
 
   private initializeButton() {
-    if (!this.analyzeButton) {
+    if (!this.imageButton) {
       log.e("Analyze button not assigned!");
       return;
     }
-    this.analyzeButton.onInteractorTriggerStart((event: InteractorEvent) => {
+    this.imageButton.onInteractorTriggerStart((event: InteractorEvent) => {
       this.analyzeImage(false);
     });
-    if (!this.analyzeTextButton) {
+    if (!this.textButton) {
       log.e("Text button not assigned!");
       return;
     }
-    this.analyzeTextButton.onInteractorTriggerStart((event: InteractorEvent) => {
+    this.textButton.onInteractorTriggerStart((event: InteractorEvent) => {
       this.analyzeImage(true);
     });
   }

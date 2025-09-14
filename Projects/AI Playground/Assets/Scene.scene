@@ -929,7 +929,7 @@
   PrefabRemaps:
     []
   Name: PromptDisplay
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: -10.552253, z: -147.500000}
@@ -2568,13 +2568,17 @@
   Enabled: true
   ScriptAsset: !<reference> a060551e-a0e9-418a-9359-2b18630f4ef9
   ScriptInputsDefault:
-    {}
+    singleInstance: true
+    verboseLogging: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
       startButton: !<MappingBased.AssignableType> d1afcb99-bd12-42d4-a235-c304b4d6d477
       welcomeText: !<reference.Text> ebaf432b-569e-4433-80ee-f4edeef5e5d0
+      pinchServiceTemplate: !<reference.SceneObject> 081e00cf-1be1-41d1-8b12-fab3ba80215b
+      singleInstance: true
+      verboseLogging: true
   ScriptTypes:
     "":
       {}
@@ -2938,7 +2942,7 @@
   PrefabRemaps:
     []
   Name: Text Button
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 15.454512, y: -21.530811, z: -147.500000}
@@ -3242,8 +3246,8 @@
   ScriptInputs:
     "":
       inputTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
-      analyzeButton: !<MappingBased.AssignableType> 2755eaaf-ef93-45dc-b460-e2b3836517a4
-      analyzeTextButton: !<MappingBased.AssignableType_1> 276d41a3-d521-4260-a25c-70f7fe736400
+      imageButton: !<MappingBased.AssignableType> 2755eaaf-ef93-45dc-b460-e2b3836517a4
+      textButton: !<MappingBased.AssignableType_1> 276d41a3-d521-4260-a25c-70f7fe736400
       imageDisplay: !<reference.Image> 030a9acb-4fca-4732-bb78-9c78865a9269
       modelStyle: realistic
       promptDisplay: !<reference.Text> 9b4695ca-d297-4911-8f79-a762991dafc8
@@ -3991,7 +3995,7 @@
   PrefabRemaps:
     []
   Name: Image Button
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -14.126513, y: -21.530811, z: -147.500000}
