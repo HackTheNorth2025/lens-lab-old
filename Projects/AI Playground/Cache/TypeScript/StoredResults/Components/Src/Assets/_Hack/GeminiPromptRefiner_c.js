@@ -27,7 +27,6 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"Output Configuration"}
-// @input Component.Text promptDisplay
 // @input bool verboseLogging = true
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
@@ -55,7 +54,6 @@ awakeEvent.bind(() => {
     checkUndefined("textButton", []);
     checkUndefined("imageDisplay", []);
     checkUndefined("modelStyle", []);
-    checkUndefined("promptDisplay", []);
     checkUndefined("verboseLogging", []);
     checkUndefined("snap3DFactory", []);
     checkUndefined("targetAnchor", []);

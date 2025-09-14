@@ -45,7 +45,7 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
 
   @ui.separator
   @ui.group_start("Output Configuration")
-  @input private promptDisplay: Text;
+  // @input private promptDisplay: Text;
   @input private verboseLogging: boolean = true;
   @ui.group_end
 
@@ -103,12 +103,12 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
     }
     if (!this.inputTexture) {
       log.e("No input texture assigned!");
-      this.updatePromptDisplay("Error: No input texture assigned");
+      // this.updatePromptDisplay("Error: No input texture assigned");
       return;
     }
 
     this.isProcessing = true;
-    this.updatePromptDisplay("Analyzing image...");
+    // this.updatePromptDisplay("Analyzing image...");
     this.generatePromptFromImage(flag);
   }
 private generatePromptFromImage(flag: boolean) {
@@ -147,7 +147,7 @@ private generatePromptFromImage(flag: boolean) {
       })
       .catch((error) => {
         log.e("Gemini process failed: " + error);
-        this.updatePromptDisplay("Error: " + error);
+        // this.updatePromptDisplay("Error: " + error);
         this.isProcessing = false;
       });
   }
@@ -155,7 +155,7 @@ private generatePromptFromImage(flag: boolean) {
   private handleGeminiResponse(response: GeminiTypes.Models.GenerateContentResponse) {
     if (response.candidates && response.candidates.length > 0) {
       const generatedPrompt = response.candidates[0].content.parts[0].text.trim();
-      this.updatePromptDisplay(generatedPrompt);
+      // this.updatePromptDisplay(generatedPrompt);
 
       // 🔹 Log to console
       log.i("Generated Keywords: " + generatedPrompt);
@@ -170,7 +170,7 @@ private generatePromptFromImage(flag: boolean) {
       }
     } else {
       log.e("No valid response from Gemini");
-      this.updatePromptDisplay("Error: No response from Gemini");
+      // this.updatePromptDisplay("Error: No response from Gemini");
     }
     this.isProcessing = false;
   }
@@ -217,12 +217,12 @@ Do NOT describe any objects in the background of the image, but you are allowed 
   // Utilities
   // ----------------------------------------------------------------------
 
-  private updatePromptDisplay(text: string) {
-    if (this.promptDisplay) {
-      this.promptDisplay.text = text;
-    }
-    print("=== GENERATED KEYWORDS/PHRASES ===\n" + text + "\n===========================");
-  }
+  // private updatePromptDisplay(text: string) {
+  //   if (this.promptDisplay) {
+  //     this.promptDisplay.text = text;
+  //   }
+  //   print("=== GENERATED KEYWORDS/PHRASES ===\n" + text + "\n===========================");
+  // }
 
   private textureToBase64(texture: Texture): Promise<string> {
     return new Promise((resolve, reject) => {
