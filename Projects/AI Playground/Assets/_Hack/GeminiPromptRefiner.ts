@@ -4,6 +4,7 @@ import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/
 import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
 import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
 import { Snap3DInteractableFactory } from "./Snap3DInteractableFactory";
+import { EndSceneController } from "./End";
 
 const log = new NativeLogger("GeminiPromptRefiner");
 
@@ -64,7 +65,7 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   @hint(
     "Template SceneObject that provides the end controller (will be cloned on start). Leave empty if already present in scene."
   )
-  private endControllerTemplate: SceneObject;
+  private endControllerTemplate: EndSceneController;
 
   @input
   @hint(
@@ -73,17 +74,15 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   private singleInstance: boolean = true;
   @ui.group_end
   public isProcessing: boolean = false;
-  private spawnedEndController: SceneObject = null;
+  private spawnedEndController: EndSceneController = null;
 
   // ----------------------------------------------------------------------
   // Lifecycle
   // ----------------------------------------------------------------------
 
-  onAwake() {
-    this.createEvent("OnStartEvent").bind(() => {
+  triggerGenerateScene() {
       this.initializeButton();
       this.setupImageDisplay();
-    });
   }
 
   private initializeButton() {
@@ -232,12 +231,11 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
 
     try {
       // Clone / copy hierarchy (API may vary; fallback strategies)
+      const parent = this.getSceneObject ? this.getSceneObject() : null;
       if ((this.endControllerTemplate as any).copyWholeHierarchy) {
-        this.spawnedEndController = (
-          this.endControllerTemplate as any
-        ).copyWholeHierarchy();
+        this.spawnedEndController = (this.endControllerTemplate as any).copyWholeHierarchy(parent);
       } else if ((this.endControllerTemplate as any).clone) {
-        this.spawnedEndController = (this.endControllerTemplate as any).clone();
+        this.spawnedEndController = (this.endControllerTemplate as any).clone(parent);
       } else {
         // Manual create + component copy not implemented; log fallback
         this.spawnedEndController = this.endControllerTemplate;
@@ -250,8 +248,9 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
         this.spawnedEndController.enabled = true;
         (global as any).__EndControllerSpawned = true;
         if (this.verboseLogging) {
-          log.i("ENd controller instantiated.");
+          log.i("End controller instantiated.");
         }
+        this.spawnedEndController.triggerEndScene();
       } else {
         log.e("Failed to instantiate end controller (null result).");
       }

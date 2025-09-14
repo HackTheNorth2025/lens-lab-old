@@ -1,6 +1,7 @@
 import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
 import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
 import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
+import { PinchService } from "Entry/PinchService";
 
 const log = new NativeLogger("StartSceneController");
 
@@ -33,7 +34,7 @@ export class StartSceneController extends BaseScriptComponent {
   @ui.group_start("Pinch Service")
   @input
   @hint("Template SceneObject that provides the Pinch Service (will be cloned on start). Leave empty if already present in scene.")
-  private pinchServiceTemplate: SceneObject;
+  private pinchServiceTemplate: PinchService;
 
   @input
   @hint("If true, will only instantiate pinch service once even across re-instantiations (tracked globally).")
@@ -49,7 +50,7 @@ export class StartSceneController extends BaseScriptComponent {
 
   private defaultWelcomeText: string = "";
   private hasStarted: boolean = false;
-  private spawnedPinchService: SceneObject = null;
+  private spawnedPinchService: PinchService = null;
 
   onAwake() {
     this.createEvent("OnStartEvent").bind(() => {
@@ -150,10 +151,11 @@ export class StartSceneController extends BaseScriptComponent {
 
     try {
       // Clone / copy hierarchy (API may vary; fallback strategies)
+      const parent = this.getSceneObject ? this.getSceneObject() : null;
       if ((this.pinchServiceTemplate as any).copyWholeHierarchy) {
-        this.spawnedPinchService = (this.pinchServiceTemplate as any).copyWholeHierarchy();
+        this.spawnedPinchService = (this.pinchServiceTemplate as any).copyWholeHierarchy(parent);
       } else if ((this.pinchServiceTemplate as any).clone) {
-        this.spawnedPinchService = (this.pinchServiceTemplate as any).clone();
+        this.spawnedPinchService = (this.pinchServiceTemplate as any).clone(parent);
       } else {
         // Manual create + component copy not implemented; log fallback
         this.spawnedPinchService = this.pinchServiceTemplate;
@@ -168,6 +170,7 @@ export class StartSceneController extends BaseScriptComponent {
         if (this.verboseLogging) {
           log.i("Pinch service instantiated.");
         }
+        this.spawnedPinchService.createCameraScene();
       } else {
         log.e("Failed to instantiate pinch service (null result).");
       }

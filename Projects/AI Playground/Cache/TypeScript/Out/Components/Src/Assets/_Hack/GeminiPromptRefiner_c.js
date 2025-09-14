@@ -36,7 +36,7 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"End controller"}
-// @input SceneObject endControllerTemplate {"hint":"Template SceneObject that provides the end controller (will be cloned on start). Leave empty if already present in scene."}
+// @input AssignableType_3 endControllerTemplate {"hint":"Template SceneObject that provides the end controller (will be cloned on start). Leave empty if already present in scene."}
 // @input bool singleInstance = true {"hint":"If true, will only instantiate pinch service once even across re-instantiations (tracked globally)."}
 // @ui {"widget":"group_end"}
 var scriptPrototype = Object.getPrototypeOf(script);

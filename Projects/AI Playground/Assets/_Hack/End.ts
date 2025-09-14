@@ -45,35 +45,24 @@ export class EndSceneController extends BaseScriptComponent {
   private hasStarted: boolean = false;
   private spawnedStartController: SceneObject = null;
 
-  onAwake() {
-    this.createEvent("OnStartEvent").bind(() => {
-      this.captureDefaultState();
+  triggerEndScene() {
       this.initializeButton();
       this.startUI();
-      if (this.verboseLogging) {
-        log.i("3D model scene initialized");
-      }
-    });
   }
 
   // ----------------------------------------------------------------------
   // Initialization
   // ----------------------------------------------------------------------
-  private captureDefaultState() {
-    if (this.meetFriendText) {
-      this.defaultMeetFriendText = this.meetFriendText.text || "";
-    }
-    if (this.interactWithModelInstructionsText) {
-      this.defaultInteractWithModelInstructionsText =
-        this.interactWithModelInstructionsText.text || "";
-    }
-  }
 
   private initializeButton() {
     if (!this.resetButton) {
       log.e("Reset button not assigned");
       return;
     }
+
+    // Enable reset button
+    this.showResetButtonAndTexts(true);
+
     this.resetButton.onInteractorTriggerStart((event: InteractorEvent) => {
       this.handleResetPressed();
     });
@@ -104,7 +93,7 @@ export class EndSceneController extends BaseScriptComponent {
     }
 
     // 3. Hide reset button
-    this.showResetButton(false);
+    this.showResetButtonAndTexts(false);
 
     if (this.verboseLogging) {
       log.i(
@@ -181,11 +170,11 @@ export class EndSceneController extends BaseScriptComponent {
       this.interactWithModelInstructionsText.text =
         this.defaultInteractWithModelInstructionsText;
     }
-    this.showResetButton(true);
+    this.showResetButtonAndTexts(true);
   }
 
-  private showResetButton(visible: boolean) {
-    if (!this.resetButton) {
+  private showResetButtonAndTexts(visible: boolean) {
+    if (!this.resetButton || !this.meetFriendText || !this.interactWithModelInstructionsText) {
       return;
     }
     try {
@@ -194,6 +183,20 @@ export class EndSceneController extends BaseScriptComponent {
         : (this.resetButton as any);
       if (so) {
         so.enabled = visible;
+      }
+
+      const meetTextSO = this.meetFriendText.getSceneObject
+        ? this.meetFriendText.getSceneObject()
+        : (this.meetFriendText as any);
+      if (meetTextSO) {
+        meetTextSO.enabled = visible;
+      }
+      
+      const instrTextSO = this.interactWithModelInstructionsText.getSceneObject
+        ? this.interactWithModelInstructionsText.getSceneObject()
+        : (this.interactWithModelInstructionsText as any);
+      if (instrTextSO) {
+        instrTextSO.enabled = visible;
       }
     } catch (e) {
       log.e("Failed to toggle start button visibility: " + e);

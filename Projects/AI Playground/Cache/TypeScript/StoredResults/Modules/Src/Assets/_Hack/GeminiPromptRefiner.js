@@ -16,11 +16,9 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
     // ----------------------------------------------------------------------
     // Lifecycle
     // ----------------------------------------------------------------------
-    onAwake() {
-        this.createEvent("OnStartEvent").bind(() => {
-            this.initializeButton();
-            this.setupImageDisplay();
-        });
+    triggerGenerateScene() {
+        this.initializeButton();
+        this.setupImageDisplay();
     }
     initializeButton() {
         if (!this.imageButton) {
@@ -68,7 +66,16 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
                 type: "generateContent",
                 body: {
                     contents: [
-                        { parts: [{ text: (flag ? this.createSystemTextPrompt() : this.createSystemPrompt()) }], role: "model" },
+                        {
+                            parts: [
+                                {
+                                    text: flag
+                                        ? this.createSystemTextPrompt()
+                                        : this.createSystemPrompt(),
+                                },
+                            ],
+                            role: "model",
+                        },
                         {
                             parts: [
                                 { text: this.createUserPrompt() },
@@ -113,6 +120,7 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
                     .createInteractable3DObject(generatedPrompt, worldPos)
                     .then((msg) => print("3D Object Created: " + msg))
                     .catch((err) => print("3D Object Error: " + err));
+                this.handleFinishedGeneration();
             }
         }
         else {
@@ -120,6 +128,57 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
             // this.updatePromptDisplay("Error: No response from Gemini");
         }
         this.isProcessing = false;
+    }
+    // END SCENE
+    handleFinishedGeneration() {
+        this.instantiateEndController();
+        // TODO: Other button/text interactions (hide image/text buttons)
+    }
+    instantiateEndController() {
+        if (this.singleInstance && global.__EndControllerSpawned) {
+            if (this.verboseLogging) {
+                log.i("End controller already instantiated (global). Skipping.");
+            }
+            return;
+        }
+        if (!this.endControllerTemplate) {
+            if (this.verboseLogging) {
+                log.w("No end controller provided. Assuming service already exists in scene.");
+            }
+            global.__EndControllerSpawned = true;
+            return;
+        }
+        try {
+            // Clone / copy hierarchy (API may vary; fallback strategies)
+            const parent = this.getSceneObject ? this.getSceneObject() : null;
+            if (this.endControllerTemplate.copyWholeHierarchy) {
+                this.spawnedEndController = this.endControllerTemplate.copyWholeHierarchy(parent);
+            }
+            else if (this.endControllerTemplate.clone) {
+                this.spawnedEndController = this.endControllerTemplate.clone(parent);
+            }
+            else {
+                // Manual create + component copy not implemented; log fallback
+                this.spawnedEndController = this.endControllerTemplate;
+                if (this.verboseLogging) {
+                    log.w("Could not clone end controller; using original reference.");
+                }
+            }
+            if (this.spawnedEndController) {
+                this.spawnedEndController.enabled = true;
+                global.__EndControllerSpawned = true;
+                if (this.verboseLogging) {
+                    log.i("End controller instantiated.");
+                }
+                this.spawnedEndController.triggerEndScene();
+            }
+            else {
+                log.e("Failed to instantiate end controller (null result).");
+            }
+        }
+        catch (e) {
+            log.e("Error instantiating end controller: " + e);
+        }
     }
     // ----------------------------------------------------------------------
     // Prompt Helpers
@@ -176,6 +235,7 @@ Do NOT describe any objects in the background of the image, but you are allowed 
     __initialize() {
         super.__initialize();
         this.isProcessing = false;
+        this.spawnedEndController = null;
     }
 };
 exports.GeminiPromptRefiner = GeminiPromptRefiner;
