@@ -740,6 +740,8 @@
   ScriptInputs:
     "":
       pinchService: !<MappingBased.AssignableType> 59e8014d-e00b-4673-a1da-7b6dc2f37050
+      defaultTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
+      gemini: !<MappingBased.AssignableType_1> ccde828a-40d8-43c1-8b5f-affe3945273d
   ScriptTypes:
     "":
       {}
@@ -5606,7 +5608,6 @@
   ScriptAsset: !<reference> 3a235bfd-9155-48eb-a2c4-e188fbec03cd
   ScriptInputsDefault:
     modelStyle: true
-    includeTechnicalSpecs: true
     verboseLogging: true
   ScriptTypesDefault:
     {}
@@ -5616,10 +5617,6 @@
       analyzeButton: !<MappingBased.AssignableType> 2755eaaf-ef93-45dc-b460-e2b3836517a4
       imageDisplay: !<reference.Image> 030a9acb-4fca-4732-bb78-9c78865a9269
       modelStyle: realistic
-      detailLevel: !<float> 2.000000
-      includeTechnicalSpecs: true
-      includeMaterials: false
-      includeLighting: false
       promptDisplay: !<reference.Text> 9b4695ca-d297-4911-8f79-a762991dafc8
       verboseLogging: true
       snap3DFactory: !<MappingBased.AssignableType_1> 4aa30a81-2a3a-4c2d-a9fa-30d11d91584f

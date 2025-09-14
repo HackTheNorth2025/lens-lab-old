@@ -250,7 +250,7 @@
             mValues:
               []
         ShaderType: Mesh3d
-      ShaderPath: a2486469-7c8b-7e1d-3197-3b4d2cef7ecb/34346672d20c93b506cf6bb3c943e741/Data/6533ae0/HoverColor.glsl
+      ShaderPath: a2486469-7c8b-7e1d-3197-3b4d2cef7ecb/34346672d20c93b506cf6bb3c943e741/Data/0a4e116/HoverColor.glsl
       Defines:
         []
       Properties:

@@ -1,9 +1,8 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 718
+    size: 717
     values:
-      - ""
       - Entry/PinchDetector.ts
       - Entry/PinchService.ts
       - Image.mat
