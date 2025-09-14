@@ -347,6 +347,7 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
+    - !<own> 613fe263-9f84-45d4-9ea6-c6dcc8fcbc1b
     - !<own> f2c1e363-7bbc-4273-959a-826175d77100
   Components:
     []
@@ -1332,9 +1333,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: |-
-    Pinch with 1 hand to drag,
-    Pinch with 2 to resize & rotate
+  Text: ""
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -1995,6 +1994,21 @@
     []
   Components:
     - !<own> 3f1605e2-b0c8-4f67-bdde-db4c0d98e816
+- !<SceneObject/613fe263-9f84-45d4-9ea6-c6dcc8fcbc1b>
+  PrefabRemaps:
+    []
+  Name: End
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 67813818-d407-4ad5-b924-7b8f0eb1fb9b
 - !<ColliderComponent/64d2ab58-4ec7-4b8e-b584-25fb98397425>
   PrefabRemaps:
     []
@@ -2043,6 +2057,28 @@
     - !<own> ec5cf781-7365-4db2-83df-e3d10556ffd3
   Components:
     []
+- !<ScriptComponent/67813818-d407-4ad5-b924-7b8f0eb1fb9b>
+  PrefabRemaps:
+    []
+  Name: End
+  Enabled: true
+  ScriptAsset: !<reference> d1f12438-641d-4db0-85a4-4ac3b4790679
+  ScriptInputsDefault:
+    singleInstance: true
+    verboseLogging: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      resetButton: !<MappingBased.AssignableType> 44a22626-5e4b-4473-bb83-f6c95948b5e5
+      meetFriendText: !<reference.Text> 8498d8fe-48de-43db-b920-dc9f0b5fef6f
+      interactWithModelInstructionsText: !<reference.Text> 40ecb28a-3bf7-4ac9-8e82-e15445aba10e
+      startControllerTemplate: !<reference.SceneObject> f2c1e363-7bbc-4273-959a-826175d77100
+      singleInstance: true
+      verboseLogging: true
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/6a4af8cf-a82a-4c07-8575-e2b338122f38>
   PrefabRemaps:
     []
@@ -2415,7 +2451,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: Meet your new friend!
+  Text: ""
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -2952,7 +2988,7 @@
 - !<SceneObject/a78badf9-7865-4671-afb4-53466a588e5b>
   PrefabRemaps:
     []
-  Name: Start Button
+  Name: Reset Button
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
@@ -3015,7 +3051,10 @@
   ScriptInputs:
     "":
       startButton: !<MappingBased.AssignableType> d1afcb99-bd12-42d4-a235-c304b4d6d477
+      imageButton: !<MappingBased.AssignableType_1> 2755eaaf-ef93-45dc-b460-e2b3836517a4
+      textButton: !<MappingBased.AssignableType_2> 276d41a3-d521-4260-a25c-70f7fe736400
       welcomeText: !<reference.Text> ebaf432b-569e-4433-80ee-f4edeef5e5d0
+      toolTip: !<reference.Text> 9b4695ca-d297-4911-8f79-a762991dafc8
       pinchServiceTemplate: !<reference.SceneObject> 081e00cf-1be1-41d1-8b12-fab3ba80215b
       singleInstance: true
       verboseLogging: true
@@ -3681,6 +3720,7 @@
   ScriptInputsDefault:
     modelStyle: true
     verboseLogging: true
+    singleInstance: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -3690,10 +3730,11 @@
       textButton: !<MappingBased.AssignableType_1> 276d41a3-d521-4260-a25c-70f7fe736400
       imageDisplay: !<reference.Image> 030a9acb-4fca-4732-bb78-9c78865a9269
       modelStyle: realistic
-      promptDisplay: !<reference.Text> 9b4695ca-d297-4911-8f79-a762991dafc8
       verboseLogging: true
       snap3DFactory: !<MappingBased.AssignableType_2> 4aa30a81-2a3a-4c2d-a9fa-30d11d91584f
       targetAnchor: !<reference.SceneObject> a5f401c0-ff6a-46d1-b13f-71899b187044
+      endControllerTemplate: !<reference.SceneObject> 02e91116-e831-439c-80a9-6f04c2598daf
+      singleInstance: true
   ScriptTypes:
     "":
       {}
