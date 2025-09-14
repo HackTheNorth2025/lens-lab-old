@@ -3,7 +3,7 @@ import { GeminiTypes } from "Remote Service Gateway.lspkg/HostedExternal/GeminiT
 import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
 import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
 import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
-import { Snap3DInteractableFactory } from "../Scripts/Snap3DInteractableFactory";
+import { Snap3DInteractableFactory } from "./Snap3DInteractableFactory";
 
 const log = new NativeLogger("GeminiPromptRefiner");
 
@@ -13,12 +13,13 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   @ui.label("Gemini Image-to-3D Prompt Refiner")
   @ui.separator
   @ui.group_start("Input Configuration")
-  @input inputTexture: Texture;
+  @input
+  inputTexture: Texture;
 
   @input
   @hint("Button to trigger the image analysis")
   private imageButton: Interactable;
-    
+
   @input
   @hint("Button to trigger the text analysis")
   private textButton: Interactable;
@@ -27,7 +28,6 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   @hint("Optional: Display the input image for reference")
   private imageDisplay: Image;
   @ui.group_end
-
   @ui.separator
   @ui.group_start("Prompt Generation Settings")
   @input
@@ -42,20 +42,20 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   )
   private modelStyle: string = "realistic";
   @ui.group_end
-
   @ui.separator
   @ui.group_start("Output Configuration")
   // @input private promptDisplay: Text;
-  @input private verboseLogging: boolean = true;
+  @input
+  private verboseLogging: boolean = true;
   @ui.group_end
 
   // 🔹 Inputs for object generation
   @ui.separator
   @ui.group_start("3D Object Generation")
-  @input snap3DFactory: Snap3DInteractableFactory;
+  @input
+  snap3DFactory: Snap3DInteractableFactory;
   @input targetAnchor: SceneObject;
   @ui.group_end
-
   public isProcessing: boolean = false;
 
   // ----------------------------------------------------------------------
@@ -111,7 +111,7 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
     // this.updatePromptDisplay("Analyzing image...");
     this.generatePromptFromImage(flag);
   }
-private generatePromptFromImage(flag: boolean) {
+  private generatePromptFromImage(flag: boolean) {
     this.textureToBase64(this.inputTexture)
       .then((base64Image: string) => {
         const request: GeminiTypes.Models.GenerateContentRequest = {
@@ -119,7 +119,16 @@ private generatePromptFromImage(flag: boolean) {
           type: "generateContent",
           body: {
             contents: [
-              { parts: [{ text: (flag ? this.createSystemTextPrompt() : this.createSystemPrompt()) }], role: "model" },
+              {
+                parts: [
+                  {
+                    text: flag
+                      ? this.createSystemTextPrompt()
+                      : this.createSystemPrompt(),
+                  },
+                ],
+                role: "model",
+              },
               {
                 parts: [
                   { text: this.createUserPrompt() },
@@ -152,9 +161,12 @@ private generatePromptFromImage(flag: boolean) {
       });
   }
 
-  private handleGeminiResponse(response: GeminiTypes.Models.GenerateContentResponse) {
+  private handleGeminiResponse(
+    response: GeminiTypes.Models.GenerateContentResponse
+  ) {
     if (response.candidates && response.candidates.length > 0) {
-      const generatedPrompt = response.candidates[0].content.parts[0].text.trim();
+      const generatedPrompt =
+        response.candidates[0].content.parts[0].text.trim();
       // this.updatePromptDisplay(generatedPrompt);
 
       // 🔹 Log to console
@@ -194,7 +206,7 @@ Rules:
 If you can identify it as a popular cartoon character, just return that character and qualitative descriptions of the character (e.g. color)
 Do NOT describe any objects in the background.`;
   }
-    
+
   private createSystemTextPrompt(): string {
     return `You are an expert visual tagger and reader. Your task is to analyze an input image and generate a very short list of descriptive keywords or short phrases. 
         Focus on any text or lettering that you are able to find, especially that of books or articles.
