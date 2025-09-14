@@ -23,10 +23,6 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"Prompt Generation Settings"}
 // @input string modelStyle = "realistic" {"widget":"combobox", "values":[{"label":"Realistic", "value":"realistic"}, {"label":"Cartoon/Animated", "value":"cartoon"}, {"label":"Low Poly", "value":"lowpoly"}, {"label":"Stylized", "value":"stylized"}, {"label":"Photorealistic", "value":"photorealistic"}]}
-// @input float detailLevel = 4
-// @input bool includeTechnicalSpecs = true
-// @input bool includeMaterials = true
-// @input bool includeLighting = true
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"Output Configuration"}
@@ -57,10 +53,6 @@ awakeEvent.bind(() => {
     checkUndefined("analyzeButton", []);
     checkUndefined("imageDisplay", []);
     checkUndefined("modelStyle", []);
-    checkUndefined("detailLevel", []);
-    checkUndefined("includeTechnicalSpecs", []);
-    checkUndefined("includeMaterials", []);
-    checkUndefined("includeLighting", []);
     checkUndefined("promptDisplay", []);
     checkUndefined("verboseLogging", []);
     checkUndefined("snap3DFactory", []);

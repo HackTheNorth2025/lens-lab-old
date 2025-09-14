@@ -37,11 +37,6 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
     ])
   )
   private modelStyle: string = "realistic";
-
-  @input private detailLevel: number = 4;
-  @input private includeTechnicalSpecs: boolean = true;
-  @input private includeMaterials: boolean = true;
-  @input private includeLighting: boolean = true;
   @ui.group_end
 
   @ui.separator
@@ -50,7 +45,7 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   @input private verboseLogging: boolean = true;
   @ui.group_end
 
-  // 🔹 New inputs for object generation
+  // 🔹 Inputs for object generation
   @ui.separator
   @ui.group_start("3D Object Generation")
   @input snap3DFactory: Snap3DInteractableFactory;
@@ -130,7 +125,7 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
             ],
             generationConfig: {
               temperature: 0.7,
-              maxOutputTokens: 1000,
+              maxOutputTokens: 60, // enough for ~10 phrases
               responseModalities: ["TEXT"],
             },
           },
@@ -149,8 +144,11 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
 
   private handleGeminiResponse(response: GeminiTypes.Models.GenerateContentResponse) {
     if (response.candidates && response.candidates.length > 0) {
-      const generatedPrompt = response.candidates[0].content.parts[0].text;
+      const generatedPrompt = response.candidates[0].content.parts[0].text.trim();
       this.updatePromptDisplay(generatedPrompt);
+
+      // 🔹 Log to console
+      log.i("Generated Keywords: " + generatedPrompt);
 
       // 🔹 Create the 3D object
       if (this.snap3DFactory && this.targetAnchor) {
@@ -172,75 +170,20 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   // ----------------------------------------------------------------------
 
   private createSystemPrompt(): string {
-    const styleInstructions = this.getStyleInstructions();
-    const detailInstructions = this.getDetailInstructions();
+    return `You are an expert visual tagger. Your task is to analyze an input image and generate a very short list of descriptive keywords or short phrases. Focus on the most prominent character or object in view; especially if it is a cartoon or other artwork character.
 
-    return `You are an expert 3D model prompt generator specializing in creating detailed, actionable prompts for 3D model generation. Your task is to analyze an input image and generate a comprehensive prompt that would create an excellent 3D model.
-
-${styleInstructions}
-
-${detailInstructions}
-
-Your generated prompt should:
-1. Be highly descriptive and specific
-2. Include technical details for 3D modeling
-3. Specify materials, textures, and surface properties
-4. Describe lighting and environmental context
-5. Include geometric details and proportions
-6. Be optimized for 3D model generation APIs
-7. Be between 100-300 words for optimal results
-
-Focus on creating a prompt that would result in a high-quality 3D model that closely matches the input image.`;
+Rules:
+- Maximum 10 items.
+- Phrases can be 1–4 words long.
+- Separate items with commas.
+- Do not use full sentences.
+- No filler text, no explanations.
+- Focus on the most important objects, styles, or visual features.
+- If you can identify it as a popular cartoon character, just output that character and some qualitative descriptions (e.g. color, fluffiness, etc.)`;
   }
 
   private createUserPrompt(): string {
-    let prompt =
-      "Analyze this image and generate a detailed 3D model generation prompt. Focus on the most prominent character or object in view; especially if it is a cartoon or other artwork character. ";
-
-    if (this.includeTechnicalSpecs) {
-      prompt +=
-        "Include technical specifications like polygon count, topology, and geometric details. ";
-    }
-
-    if (this.includeMaterials) {
-      prompt +=
-        "Describe materials, textures, surface properties, and color information. ";
-    }
-
-    if (this.includeLighting) {
-      prompt += "Include lighting conditions and environmental context. ";
-    }
-
-    prompt += `The model should be in ${this.modelStyle} style.`;
-
-    return prompt;
-  }
-
-  private getStyleInstructions(): string {
-    const styleMap = {
-      realistic:
-        "Generate a realistic 3D model prompt with photorealistic materials, accurate proportions, and natural lighting.",
-      cartoon:
-        "Generate a stylized cartoon/animated 3D model prompt with simplified geometry, vibrant colors, and exaggerated features.",
-      lowpoly:
-        "Generate a low-poly 3D model prompt with minimal geometry, flat shading, and geometric simplicity.",
-      stylized:
-        "Generate a stylized 3D model prompt with artistic interpretation, unique proportions, and creative materials.",
-      photorealistic:
-        "Generate a photorealistic 3D model prompt with ultra-high detail, realistic materials, and accurate lighting.",
-    };
-    return styleMap[this.modelStyle] || styleMap["realistic"];
-  }
-
-  private getDetailInstructions(): string {
-    const detailMap = {
-      1: "Keep the prompt simple and basic, focusing on main shapes and colors.",
-      2: "Include moderate detail with basic materials and simple geometry descriptions.",
-      3: "Provide good detail with material descriptions, basic lighting, and geometric specifics.",
-      4: "Give comprehensive detail with full material descriptions, lighting context, and detailed geometry.",
-      5: "Provide extremely detailed descriptions with technical specifications, advanced materials, and precise geometric details.",
-    };
-    return detailMap[this.detailLevel] || detailMap[4];
+    return `Analyze this image and output up to 10 keywords or short phrases, comma-separated, that best describe the main subject and style. Style should match: ${this.modelStyle}.`;
   }
 
   // ----------------------------------------------------------------------
@@ -251,7 +194,7 @@ Focus on creating a prompt that would result in a high-quality 3D model that clo
     if (this.promptDisplay) {
       this.promptDisplay.text = text;
     }
-    print("=== GENERATED 3D PROMPT ===\n" + text + "\n===========================");
+    print("=== GENERATED KEYWORDS/PHRASES ===\n" + text + "\n===========================");
   }
 
   private textureToBase64(texture: Texture): Promise<string> {
