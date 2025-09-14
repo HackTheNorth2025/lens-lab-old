@@ -1,0 +1,66 @@
+- !<AssetImportMetadata/c0758b58-3359-48d1-be98-0e44a3acdaef>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d1f12438-641d-4db0-85a4-4ac3b4790679
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d1f12438-641d-4db0-85a4-4ac3b4790679
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 90281489-ba5e-4b51-828e-8e6675a20916
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/90281489-ba5e-4b51-828e-8e6675a20916>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: cd326f3e-920e-4dac-b196-6a79d58eef75
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    interactWithModelInstructionsText: false
+    meetFriendText: false
+    resetButton: false
+    singleInstance: false
+    startControllerTemplate: false
+    verboseLogging: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - resetButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      meetFriendText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      interactWithModelInstructionsText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      startControllerTemplate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      singleInstance: true
+      verboseLogging: true
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"End Scene Configuration"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"UI References"}'
+    - '// @input AssignableType resetButton {"hint":"Button the user presses to reset the experience"}'
+    - '// @input Component.Text meetFriendText {"hint":"Meet new friend text"}'
+    - '// @input Component.Text interactWithModelInstructionsText {"hint":"Interact with model instructions"}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input SceneObject startControllerTemplate {"hint":"Template SceneObject that provides the Start Controller Service (will be cloned on restart). Leave empty if already present in scene."}'
+    - '// @input bool singleInstance = true {"hint":"If true, will only instantiate start controller once even across re-instantiations (tracked globally)."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Debug"}'
+    - '// @input bool verboseLogging = true {"hint":"Enable verbose logging"}'
+    - '// @ui {"widget":"group_end"}'

@@ -1,7 +1,7 @@
 import { PinchButton } from "SpectaclesInteractionKit.lspkg/Components/UI/PinchButton/PinchButton";
 import { GeminiAssistant } from "./GeminiAssistant";
 import { OpenAIAssistant } from "./OpenAIAssistant";
-import { Snap3DInteractableFactory } from "./Snap3DInteractableFactory";
+import { Snap3DInteractableFactory } from "../_Hack/Snap3DInteractableFactory";
 import { SphereController } from "./SphereController";
 import { LSTween } from "LSTween.lspkg/LSTween";
 import Easing from "LSTween.lspkg/TweenJS/Easing";
