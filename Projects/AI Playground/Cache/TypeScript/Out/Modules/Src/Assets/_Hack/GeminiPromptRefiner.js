@@ -118,7 +118,8 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
     // Prompt Helpers
     // ----------------------------------------------------------------------
     createSystemPrompt() {
-        return `You are an expert visual tagger. Your task is to analyze an input image and generate a very short list of descriptive keywords or short phrases. Focus on the most prominent character or object in view; especially if it is a cartoon or other artwork character.
+        return `You are an expert visual tagger. Your task is to analyze an input image and generate a very short list of descriptive keywords or short phrases. 
+        Focus on the most prominent character or object in view; especially if it is a cartoon or other artwork character.
 
 Rules:
 - Maximum 10 items.
@@ -126,8 +127,10 @@ Rules:
 - Separate items with commas.
 - Do not use full sentences.
 - No filler text, no explanations.
-- Focus on the most important objects, styles, or visual features.
-- If you can identify it as a popular cartoon character, just output that character and some qualitative descriptions (e.g. color, fluffiness, etc.)`;
+- Focus on the most important objects, styles, or visual features, including color.
+
+If you can identify it as a popular cartoon character, just return that character and qualitative descriptions of the character (e.g. color)
+Do NOT describe any objects in the background.`;
     }
     createUserPrompt() {
         return `Analyze this image and output up to 10 keywords or short phrases, comma-separated, that best describe the main subject and style. Style should match: ${this.modelStyle}.`;
