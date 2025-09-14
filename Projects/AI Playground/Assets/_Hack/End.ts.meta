@@ -57,7 +57,6 @@
     - '// @input Component.Text interactWithModelInstructionsText {"hint":"Interact with model instructions"}'
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
-    - '// @ui {"widget":"group_start", "label":"Start Controller"}'
     - '// @input SceneObject startControllerTemplate {"hint":"Template SceneObject that provides the Start Controller Service (will be cloned on restart). Leave empty if already present in scene."}'
     - '// @input bool singleInstance = true {"hint":"If true, will only instantiate start controller once even across re-instantiations (tracked globally)."}'
     - '// @ui {"widget":"group_end"}'

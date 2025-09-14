@@ -27,12 +27,10 @@
   CurrentVisibility: Editable
   MaxVisibility: Editable
   ScriptInputsHidden:
-    endControllerTemplate: false
     imageButton: false
     imageDisplay: false
     inputTexture: false
     modelStyle: false
-    singleInstance: false
     snap3DFactory: false
     targetAnchor: false
     textButton: false
@@ -50,8 +48,6 @@
       verboseLogging: true
       snap3DFactory: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
       targetAnchor: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      endControllerTemplate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
-      singleInstance: true
   ScriptTypes:
     -
       {}
@@ -77,9 +73,4 @@
     - '// @ui {"widget":"group_start", "label":"3D Object Generation"}'
     - // @input AssignableType_2 snap3DFactory
     - // @input SceneObject targetAnchor
-    - '// @ui {"widget":"group_end"}'
-    - '// @ui {"widget":"separator"}'
-    - '// @ui {"widget":"group_start", "label":"End controller"}'
-    - '// @input SceneObject endControllerTemplate {"hint":"Template SceneObject that provides the end controller (will be cloned on start). Leave empty if already present in scene."}'
-    - '// @input bool singleInstance = true {"hint":"If true, will only instantiate pinch service once even across re-instantiations (tracked globally)."}'
     - '// @ui {"widget":"group_end"}'
