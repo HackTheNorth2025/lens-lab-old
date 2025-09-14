@@ -1,6 +1,7 @@
 import { InteractorEvent } from "SpectaclesInteractionKit.lspkg/Core/Interactor/InteractorEvent";
 import { Interactable } from "SpectaclesInteractionKit.lspkg/Components/Interaction/Interactable/Interactable";
 import NativeLogger from "SpectaclesInteractionKit.lspkg/Utils/NativeLogger";
+import { PinchService } from "Entry/PinchService";
 
 const log = new NativeLogger("StartSceneController");
 
@@ -13,17 +14,27 @@ export class StartSceneController extends BaseScriptComponent {
   @input
   @hint("Button the user presses to start the experience")
   private startButton: Interactable;
+  @input
+  @hint("Button for image interaction")
+  private imageButton: Interactable;
+  @input
+  @hint("Button for text interaction")
+  private textButton: Interactable;
 
   @input
   @hint("Welcome / intro text that will be cleared after start")
   private welcomeText: Text;
+
+  @input
+  @hint("Welcome / intro text that will be cleared after start")
+  private toolTip: Text;
   @ui.group_end
 
   @ui.separator
   @ui.group_start("Pinch Service")
   @input
   @hint("Template SceneObject that provides the Pinch Service (will be cloned on start). Leave empty if already present in scene.")
-  private pinchServiceTemplate: SceneObject;
+  private pinchServiceTemplate: PinchService;
 
   @input
   @hint("If true, will only instantiate pinch service once even across re-instantiations (tracked globally).")
@@ -39,12 +50,13 @@ export class StartSceneController extends BaseScriptComponent {
 
   private defaultWelcomeText: string = "";
   private hasStarted: boolean = false;
-  private spawnedPinchService: SceneObject = null;
+  private spawnedPinchService: PinchService = null;
 
   onAwake() {
     this.createEvent("OnStartEvent").bind(() => {
       this.captureDefaultState();
       this.initializeButton();
+      this.hideImageAndTextButtons(); // Ensure hidden at startup
       this.resetUI();
       if (this.verboseLogging) {
         log.i("Start scene initialized");
@@ -72,6 +84,18 @@ export class StartSceneController extends BaseScriptComponent {
     });
   }
 
+  private hideImageAndTextButtons() {
+    if (this.imageButton && this.imageButton.getSceneObject) {
+      this.imageButton.getSceneObject().enabled = false;
+    }
+    if (this.textButton && this.textButton.getSceneObject) {
+      this.textButton.getSceneObject().enabled = false;
+    }
+    if (this.toolTip) {
+    this.toolTip.enabled = false;
+    }
+  }
+
   // ----------------------------------------------------------------------
   // Start Flow
   // ----------------------------------------------------------------------
@@ -95,6 +119,9 @@ export class StartSceneController extends BaseScriptComponent {
 
     // 3. Hide start button
     this.showStartButton(false);
+
+    // 4. Show image and text buttons
+    this.showButtons(true);
 
     if (this.verboseLogging) {
       log.i("Experience started: pinch service ready, UI updated.");
@@ -124,10 +151,11 @@ export class StartSceneController extends BaseScriptComponent {
 
     try {
       // Clone / copy hierarchy (API may vary; fallback strategies)
+      const parent = this.getSceneObject ? this.getSceneObject() : null;
       if ((this.pinchServiceTemplate as any).copyWholeHierarchy) {
-        this.spawnedPinchService = (this.pinchServiceTemplate as any).copyWholeHierarchy();
+        this.spawnedPinchService = (this.pinchServiceTemplate as any).copyWholeHierarchy(parent);
       } else if ((this.pinchServiceTemplate as any).clone) {
-        this.spawnedPinchService = (this.pinchServiceTemplate as any).clone();
+        this.spawnedPinchService = (this.pinchServiceTemplate as any).clone(parent);
       } else {
         // Manual create + component copy not implemented; log fallback
         this.spawnedPinchService = this.pinchServiceTemplate;
@@ -142,6 +170,7 @@ export class StartSceneController extends BaseScriptComponent {
         if (this.verboseLogging) {
           log.i("Pinch service instantiated.");
         }
+        this.spawnedPinchService.createCameraScene();
       } else {
         log.e("Failed to instantiate pinch service (null result).");
       }
@@ -160,6 +189,7 @@ export class StartSceneController extends BaseScriptComponent {
       this.welcomeText.text = this.defaultWelcomeText;
     }
     this.showStartButton(true);
+    this.showButtons(false);
   }
 
   private showStartButton(visible: boolean) {
@@ -175,6 +205,18 @@ export class StartSceneController extends BaseScriptComponent {
       }
     } catch (e) {
       log.e("Failed to toggle start button visibility: " + e);
+    }
+  }
+
+  private showButtons(visible: boolean) {
+    if (this.imageButton && this.imageButton.getSceneObject) {
+      this.imageButton.getSceneObject().enabled = visible;
+    }
+    if (this.textButton && this.textButton.getSceneObject) {
+      this.textButton.getSceneObject().enabled = visible;
+    }
+    if (this.toolTip) {
+      this.toolTip.enabled = visible;
     }
   }
 }

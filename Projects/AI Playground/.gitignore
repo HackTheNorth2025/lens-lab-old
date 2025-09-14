@@ -25,6 +25,7 @@ Cache/
 BackUp/
 *.tmp
 *.lock
+*.ts.meta
 
 # API Keys (IMPORTANT)
 **/RemoteServiceGatewayCredentials*

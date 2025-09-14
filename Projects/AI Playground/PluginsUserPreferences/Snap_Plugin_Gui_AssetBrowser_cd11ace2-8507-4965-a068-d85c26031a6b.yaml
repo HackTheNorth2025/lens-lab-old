@@ -1,12 +1,12 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 731
+    size: 726
     values:
       - ""
-      - Entry
       - Entry/PinchDetector.ts
       - Entry/PinchService.ts
+      - Fake 2D Fluids.lspkg/package.native
       - Image.mat
       - LSTween.lspkg
       - LSTween.lspkg/Examples
@@ -33,10 +33,8 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
-      - Modules
       - Modules/Camera Module.cameraModule
       - Modules/Internet Module.internetModule
-      - Prefabs
       - Prefabs/Snap3DInteractable.prefab
       - Remote Service Gateway.lspkg
       - Remote Service Gateway.lspkg/Helpers
@@ -100,7 +98,6 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Event.ts
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
-      - Render
       - Render/Device Camera Texture.deviceCameraTexture
       - Render/Echopark.hdr
       - Render/Echopark.hdr/Diffuse
@@ -115,7 +112,6 @@ CollapsedEntities:
       - Scene Manager.lspkg/Scripts/SceneManagerModule.js
       - Scene Manager.lspkg/package.native
       - Scene.scene
-      - Scripts
       - Scripts/AIAssistantUIBridge.ts
       - Scripts/APIKeyHint.ts
       - Scripts/ASRQueryController.ts
@@ -126,7 +122,6 @@ CollapsedEntities:
       - Scripts/InternetAvailabilityPopUp.ts
       - Scripts/OpenAIAssistant.ts
       - Scripts/Snap3DInteractable.ts
-      - Scripts/Snap3DInteractableFactory.ts
       - Scripts/SphereController.ts
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerEndAudioTrack.wav
@@ -730,7 +725,7 @@ CollapsedEntities:
       - Visuals/Textures/NoInternetAlert.png
       - Visuals/Textures/NoInternetWarning.mat
       - Visuals/image_unlit.ss_graph
-      - _Hack
+      - _Hack/End.ts
       - _Hack/GeminiPromptRefiner.ts
       - _Hack/Start.ts
       - _Hack/original.jpg

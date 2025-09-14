@@ -3,16 +3,17 @@ import { GeminiPromptRefiner } from "../_Hack/GeminiPromptRefiner";
 @component
 export class PinchService extends BaseScriptComponent {
     @input private cameraModule: CameraModule;
-    
+
     private camera: ImageRequest;
     private flag: boolean = false;
     
     @input private gemini : GeminiPromptRefiner;
     
-    onAwake() {
+    async createCameraScene() {
         this.camera = CameraModule.createImageRequest();
-        print('Image request created');
-    }
+        print("request image now");
+        const imageFrame = await this.cameraModule.requestImage(this.camera);
+    } 
     
     async pinchDetected() {
         if (!this.flag && !this.gemini.isProcessing) {
@@ -23,8 +24,7 @@ export class PinchService extends BaseScriptComponent {
             const imageFrame = await this.cameraModule.requestImage(this.camera);
             
             this.gemini.inputTexture = imageFrame.texture;
-            this.gemini.setupImageDisplay();
-            
+            this.gemini.triggerGenerateScene();            
             this.flag = false;
         }
     }

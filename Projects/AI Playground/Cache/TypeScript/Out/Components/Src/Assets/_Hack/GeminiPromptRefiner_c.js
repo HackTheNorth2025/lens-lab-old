@@ -17,8 +17,8 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"Input Configuration"}
 // @input Asset.Texture inputTexture
-// @input AssignableType analyzeButton {"hint":"Button to trigger the image analysis"}
-// @input AssignableType_1 analyzeTextButton {"hint":"Button to trigger the text analysis"}
+// @input AssignableType imageButton {"hint":"Button to trigger the image analysis"}
+// @input AssignableType_1 textButton {"hint":"Button to trigger the text analysis"}
 // @input Component.Image imageDisplay {"hint":"Optional: Display the input image for reference"}
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
@@ -27,13 +27,17 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"Output Configuration"}
-// @input Component.Text promptDisplay
 // @input bool verboseLogging = true
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"3D Object Generation"}
 // @input AssignableType_2 snap3DFactory
 // @input SceneObject targetAnchor
+// @ui {"widget":"group_end"}
+// @ui {"widget":"separator"}
+// @ui {"widget":"group_start", "label":"End controller"}
+// @input AssignableType_3 endControllerTemplate {"hint":"Template SceneObject that provides the end controller (will be cloned on start). Leave empty if already present in scene."}
+// @input bool singleInstance = true {"hint":"If true, will only instantiate pinch service once even across re-instantiations (tracked globally)."}
 // @ui {"widget":"group_end"}
 var scriptPrototype = Object.getPrototypeOf(script);
 if (!global.BaseScriptComponent){
@@ -51,14 +55,15 @@ script.__initialize();
 let awakeEvent = script.createEvent("OnAwakeEvent");
 awakeEvent.bind(() => {
     checkUndefined("inputTexture", []);
-    checkUndefined("analyzeButton", []);
-    checkUndefined("analyzeTextButton", []);
+    checkUndefined("imageButton", []);
+    checkUndefined("textButton", []);
     checkUndefined("imageDisplay", []);
     checkUndefined("modelStyle", []);
-    checkUndefined("promptDisplay", []);
     checkUndefined("verboseLogging", []);
     checkUndefined("snap3DFactory", []);
     checkUndefined("targetAnchor", []);
+    checkUndefined("endControllerTemplate", []);
+    checkUndefined("singleInstance", []);
     if (script.onAwake) {
        script.onAwake();
     }

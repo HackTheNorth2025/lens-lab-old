@@ -1,5 +1,5 @@
 import { ASRQueryController } from "./ASRQueryController";
-import { Snap3DInteractableFactory } from "./Snap3DInteractableFactory";
+import { Snap3DInteractableFactory } from "../_Hack/Snap3DInteractableFactory";
 
 @component
 export class InteractableImageGenerator extends BaseScriptComponent {
