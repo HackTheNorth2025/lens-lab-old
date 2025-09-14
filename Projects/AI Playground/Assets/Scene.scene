@@ -15,6 +15,7 @@
     - !<own> f3921fac-eed0-4903-b843-c07d0ca03688
     - !<own> 0285209e-2ecf-41bc-8f1c-9fb8d0f2e97e
     - !<own> 49105351-c753-4c96-b205-013029a79998
+    - !<own> 5503ce61-4030-4cf2-9795-1f978e1aca94
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -224,6 +225,1343 @@
     - !<own> 10a110cd-52da-4928-b5d9-3e8ab4b74bad
     - !<own> 13c823fc-c127-49f8-affb-9a79e9a40457
     - !<own> e82e9059-66d4-4a9c-a890-c449457d657c
+    - !<own> 08558ea6-ef1b-4cdf-984d-e8db520f5dbd
+    - !<own> 08c0a63e-ec7e-496c-bc99-8f8c18f98c98
+- !<ScriptComponent/08558ea6-ef1b-4cdf-984d-e8db520f5dbd>
+  PrefabRemaps:
+    []
+  Name: Behavior
+  Enabled: true
+  ScriptAsset: !<reference> a92b8e3e-690d-4b45-b744-161ceabc0ffc
+  ScriptInputsDefault:
+    triggeringEventType: true
+    touchEventEventType: true
+    faceEventEventType: true
+    faceEventFaceIndex: true
+    onEnabledObject: true
+    onDisabledObject: true
+    interactionEventEventType: true
+    interactionEventTarget: true
+    animType: true
+    animationEndAnimatedTexture: true
+    animationEndImageVisual: true
+    animationEndAnimMixer: true
+    animationEndAnimLayerName: true
+    animationEndAnimPlayer: true
+    animationEndAnimClipName: true
+    tweenEndTargetObject: true
+    tweenEndTweenName: true
+    lookingAtLookingObject: true
+    lookingAtLookTarget: true
+    lookingAtFlipForwardVec: true
+    lookingAtCompareType: true
+    lookingAtAngle: true
+    lookingAtAllowRepeat: true
+    boundsCheckObject: true
+    boundsCheckBoundaryMeshVisual: true
+    boundsCheckTriggerOptions: true
+    distanceCheckObjectA: true
+    distanceCheckObjectB: true
+    distanceCheckCompareType: true
+    distanceCheckDistance: true
+    distanceCheckAllowRepeat: true
+    distanceCheckFlattenZForScreenTransforms: true
+    markerTrackingEventEventType: true
+    markerTrackingEventMarkerTracking: true
+    objectTrackingEventEventType: true
+    objectTrackingEventObjectTracking: true
+    objectTrackingEventDescStartKey: true
+    objectTrackingEventDescEndKey: true
+    objectTracking3DEventObjectTracking3D: true
+    objectTracking3DEventEventType: true
+    landmarkerEventEventType: true
+    landmarkerEventLocationTracking: true
+    machineLearningEventEventType: true
+    machineLearningEventMlComponent: true
+    recordingEventEventType: true
+    onCustomTriggerTriggerName: true
+    onCustomTriggerTriggerNames: true
+    onCustomTriggerUseList: true
+    physicsColliderEventCollider: true
+    physicsColliderEventCollisionType: true
+    physicsColliderEventEventType: true
+    physicsColliderEventOverlapStatic: true
+    physicsColliderEventOverlapDynamic: true
+    physicsColliderEventOverlapIntangible: true
+    physicsColliderEventFilterObjectsBy: true
+    physicsColliderEventAllowedObjects: true
+    physicsColliderEventNameMatchType: true
+    physicsColliderEventAllowedNames: true
+    physicsRaycastRaycastSource: true
+    physicsRaycastSourceObject: true
+    physicsRaycastFlipForwardVec: true
+    physicsRaycastCamera: true
+    physicsRaycastTapEvent: true
+    physicsRaycastTouchStartEvent: true
+    physicsRaycastTouchMoveEvent: true
+    physicsRaycastTouchEndEvent: true
+    physicsRaycastProbeType: true
+    physicsRaycastPhysicsWorld: true
+    physicsRaycastMaxDistance: true
+    physicsRaycastDebugDrawEnabled: true
+    physicsRaycastOverlapStatic: true
+    physicsRaycastOverlapDynamic: true
+    physicsRaycastOverlapIntangible: true
+    physicsRaycastFilterObjectsBy: true
+    physicsRaycastAllowedObjects: true
+    physicsRaycastNameMatchType: true
+    physicsRaycastAllowedNames: true
+    triggerLimitType: true
+    triggerInterval: true
+    triggerDelay: true
+    animateImageAnimatedTexture: true
+    animateImageVisualObject: true
+    animateImageAction: true
+    animateImageLoop: true
+    animateImagePauseFrame: true
+    animateImageAdvanced: true
+    animateImagePingPong: true
+    animateImageReverse: true
+    animateMeshAnimationPlayerAnimationPlayer: true
+    animateMeshAnimationPlayerClipName: true
+    animateMeshAnimationPlayerAction: true
+    animateMeshAnimationPlayerWeight: true
+    animateMeshAnimationPlayerPlaybackMode: true
+    animateMeshAnimationPlayerStopOtherLayers: true
+    playSoundAction: true
+    playSoundLoop: true
+    playSoundVolume: true
+    playSoundFadeOut: true
+    playVideoVideoTexture: true
+    playVideoVisualObject: true
+    playVideoAction: true
+    playVideoLoop: true
+    setEnabledEntityType: true
+    setEnabledTarget: true
+    setEnabledTargetComponent: true
+    setEnabledAction: true
+    setParentTarget: true
+    setParentNewParent: true
+    setParentPreserveWorldTransform: true
+    setColorVisual: true
+    setColorMaterial: true
+    setColorColor: true
+    setTextureTarget: true
+    setTextureNewTexture: true
+    setTextComponentType: true
+    setTextTextComponent: true
+    setTextText3DComponent: true
+    setTextText: true
+    runTweenTargetObject: true
+    runTweenTweenName: true
+    runTweenAction: true
+    setPositionObjectToMove: true
+    setPositionPosition: true
+    setPositionLocalSpace: true
+    setRotationObjectToRotate: true
+    setRotationRotationAngle: true
+    setRotationLocalSpace: true
+    setScaleObjectToScale: true
+    setScaleScale: true
+    setScaleLocalSpace: true
+    setScreenPositionScreenTransform: true
+    setScreenPositionPositionType: true
+    setScreenPositionBasicPosition: true
+    setScreenPositionAnchorsCenter: true
+    setScreenPositionOffsetsCenter: true
+    setScreenRotationScreenTransform: true
+    setScreenRotationAngle: true
+    setScreenSizeScreenTransform: true
+    setScreenSizeSizeType: true
+    setScreenSizeBasicScale: true
+    setScreenSizeAnchorsSize: true
+    setScreenSizeOffsetsSize: true
+    setBlendshapesV2MeshVisual: true
+    setBlendshapesV2Name: true
+    setBlendshapesV2Weight: true
+    setMaterialParameterTargetType: true
+    setMaterialParameterMaterial: true
+    setMaterialParameterMeshVisual: true
+    setMaterialParameterVFXAsset: true
+    setMaterialParameterVFXComponent: true
+    setMaterialParameterParameterName: true
+    setMaterialParameterValueType: true
+    setMaterialParameterBoolValue: true
+    setMaterialParameterIntValue: true
+    setMaterialParameterFloatValue: true
+    setMaterialParameterColorRGBValue: true
+    setMaterialParameterColorRGBAValue: true
+    setMaterialParameterTextureValue: true
+    setMaterialParameterVec2Value: true
+    setMaterialParameterVec3Value: true
+    setMaterialParameterVec4Value: true
+    setTouchBlockingTargetType: true
+    setTouchBlockingGlobalTouchBlocking: true
+    setTouchBlockingTouchComponent: true
+    setTouchBlockingTouchTypeTouch: true
+    setTouchBlockingTouchTypeTap: true
+    setTouchBlockingTouchTypeDoubleTap: true
+    setTouchBlockingTouchTypeScale: true
+    setTouchBlockingTouchTypePan: true
+    setTouchBlockingTouchTypeSwipe: true
+    showHintHint: true
+    showHintDuration: true
+    runMLMlComponent: true
+    runMLAction: true
+    runMLSync: true
+    runMLRecurring: true
+    runMLStartTiming: true
+    runMLEndTiming: true
+    instantiatePrefabPrefab: true
+    instantiatePrefabParent: true
+    destroyObjectObject: true
+    printMessageText: true
+    callScriptAPITargetType: true
+    callScriptAPISceneObject: true
+    callScriptAPIComponent: true
+    callScriptAPICallType: true
+    callScriptAPIFunctionName: true
+    callScriptAPIPropertyName: true
+    callScriptAPI_arg1ValueType: true
+    callScriptAPI_arg1BoolValue: true
+    callScriptAPI_arg1IntValue: true
+    callScriptAPI_arg1FloatValue: true
+    callScriptAPI_arg1StringValue: true
+    callScriptAPI_arg1ColorRGBValue: true
+    callScriptAPI_arg1ColorRGBAValue: true
+    callScriptAPI_arg1Vec2Value: true
+    callScriptAPI_arg1Vec3Value: true
+    callScriptAPI_arg1Vec4Value: true
+    callScriptAPI_arg1QuatValue: true
+    callScriptAPI_arg1SceneObjectValue: true
+    callScriptAPI_arg1AssetValue: true
+    callScriptAPI_arg1TextureValue: true
+    callScriptAPI_arg1ComponentValue: true
+    callScriptAPI_arg1BoolArrayValue: true
+    callScriptAPI_arg1IntArrayValue: true
+    callScriptAPI_arg1FloatArrayValue: true
+    callScriptAPI_arg1StringArrayValue: true
+    callScriptAPI_arg1Vec2ArrayValue: true
+    callScriptAPI_arg1Vec3ArrayValue: true
+    callScriptAPI_arg1Vec4ArrayValue: true
+    callScriptAPI_arg1QuatArrayValue: true
+    callScriptAPI_arg1SceneObjectArrayValue: true
+    callScriptAPI_arg1AssetArrayValue: true
+    callScriptAPI_arg1TextureArrayValue: true
+    callScriptAPI_arg1ComponentArrayValue: true
+    callScriptAPI_arg2ValueType: true
+    callScriptAPI_arg2BoolValue: true
+    callScriptAPI_arg2IntValue: true
+    callScriptAPI_arg2FloatValue: true
+    callScriptAPI_arg2StringValue: true
+    callScriptAPI_arg2ColorRGBValue: true
+    callScriptAPI_arg2ColorRGBAValue: true
+    callScriptAPI_arg2Vec2Value: true
+    callScriptAPI_arg2Vec3Value: true
+    callScriptAPI_arg2Vec4Value: true
+    callScriptAPI_arg2QuatValue: true
+    callScriptAPI_arg2SceneObjectValue: true
+    callScriptAPI_arg2AssetValue: true
+    callScriptAPI_arg2TextureValue: true
+    callScriptAPI_arg2ComponentValue: true
+    callScriptAPI_arg2BoolArrayValue: true
+    callScriptAPI_arg2IntArrayValue: true
+    callScriptAPI_arg2FloatArrayValue: true
+    callScriptAPI_arg2StringArrayValue: true
+    callScriptAPI_arg2Vec2ArrayValue: true
+    callScriptAPI_arg2Vec3ArrayValue: true
+    callScriptAPI_arg2Vec4ArrayValue: true
+    callScriptAPI_arg2QuatArrayValue: true
+    callScriptAPI_arg2SceneObjectArrayValue: true
+    callScriptAPI_arg2AssetArrayValue: true
+    callScriptAPI_arg2TextureArrayValue: true
+    callScriptAPI_arg2ComponentArrayValue: true
+    callScriptAPI_valueValueType: true
+    callScriptAPI_valueBoolValue: true
+    callScriptAPI_valueIntValue: true
+    callScriptAPI_valueFloatValue: true
+    callScriptAPI_valueStringValue: true
+    callScriptAPI_valueColorRGBValue: true
+    callScriptAPI_valueColorRGBAValue: true
+    callScriptAPI_valueVec2Value: true
+    callScriptAPI_valueVec3Value: true
+    callScriptAPI_valueVec4Value: true
+    callScriptAPI_valueQuatValue: true
+    callScriptAPI_valueSceneObjectValue: true
+    callScriptAPI_valueAssetValue: true
+    callScriptAPI_valueTextureValue: true
+    callScriptAPI_valueComponentValue: true
+    callScriptAPI_valueBoolArrayValue: true
+    callScriptAPI_valueIntArrayValue: true
+    callScriptAPI_valueFloatArrayValue: true
+    callScriptAPI_valueStringArrayValue: true
+    callScriptAPI_valueVec2ArrayValue: true
+    callScriptAPI_valueVec3ArrayValue: true
+    callScriptAPI_valueVec4ArrayValue: true
+    callScriptAPI_valueQuatArrayValue: true
+    callScriptAPI_valueSceneObjectArrayValue: true
+    callScriptAPI_valueAssetArrayValue: true
+    callScriptAPI_valueTextureArrayValue: true
+    callScriptAPI_valueComponentArrayValue: true
+    sendCustomTriggerTriggerName: true
+    sendCustomTriggerTriggerNames: true
+    sendCustomTriggerUseList: true
+    sendCustomTriggerLoopAfterEnd: true
+    physicsApplyForceBody: true
+    physicsApplyForceForceType: true
+    physicsApplyForceMode: true
+    physicsApplyForceForceValue: true
+    physicsApplyForceSpace: true
+    physicsApplyForceObjectSpace: true
+    sceneManagerLoadSceneSceneName: true
+    sceneManagerLoadSceneLoadType: true
+    sceneManagerLoadSceneLoadAdditively: true
+    sceneManagerLoadSceneLoadEnabled: true
+    sceneManagerLoadSceneCustomizeSceneRoot: true
+    sceneManagerLoadSceneSceneRootObject: true
+    sceneManagerLoadSceneUseLoadingScene: true
+    sceneManagerLoadSceneLoadingSceneName: true
+    sceneManagerLoadSceneCallbackOnProgress: true
+    sceneManagerLoadSceneOnProgressCallbackScriptComponent: true
+    sceneManagerLoadSceneOnProgressCallbackFunctionName: true
+    sceneManagerLoadSceneCallbackOnComplete: true
+    sceneManagerLoadSceneOnCompleteCallbackScriptComponent: true
+    sceneManagerLoadSceneOnCompleteCallbackFunctionName: true
+    animateMeshAnimationMixer: true
+    animateMeshLayerName: true
+    animateMeshAction: true
+    animateMeshWeight: true
+    animateMeshLoop: true
+    animateMeshStopOtherLayers: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      triggeringEventType: TouchEvent
+      touchEventEventType: TapEvent
+      touchEventTouchTarget: !<reference.BaseMeshVisual> 03fecc97-187f-489b-9ff8-ea3aed938051
+      faceEventEventType: MouthOpenedEvent
+      faceEventFaceIndex: 0
+      onEnabledObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      onDisabledObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      interactionEventEventType: onTap
+      interactionEventTarget: !<reference.BaseMeshVisual> 00000000-0000-0000-0000-000000000000
+      animType: Animated Texture
+      animationEndAnimatedTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      animationEndImageVisual: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      animationEndAnimMixer: !<reference.AnimationMixer> 00000000-0000-0000-0000-000000000000
+      animationEndAnimLayerName: ""
+      animationEndAnimPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
+      animationEndAnimClipName: ""
+      tweenEndTargetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tweenEndTweenName: ""
+      lookingAtLookingObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lookingAtLookTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lookingAtFlipForwardVec: true
+      lookingAtCompareType: -1
+      lookingAtAngle: !<float> 10.000000
+      lookingAtAllowRepeat: false
+      boundsCheckObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      boundsCheckBoundaryMeshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      boundsCheckTriggerOptions: On Enter
+      distanceCheckObjectA: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      distanceCheckObjectB: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      distanceCheckCompareType: -1
+      distanceCheckDistance: !<float> 1.000000
+      distanceCheckAllowRepeat: false
+      distanceCheckFlattenZForScreenTransforms: true
+      markerTrackingEventEventType: Marker Found
+      markerTrackingEventMarkerTracking: !<reference.MarkerTrackingComponent> 00000000-0000-0000-0000-000000000000
+      objectTrackingEventEventType: Object Found
+      objectTrackingEventObjectTracking: !<reference.ObjectTracking> 00000000-0000-0000-0000-000000000000
+      objectTrackingEventDescStartKey: ""
+      objectTrackingEventDescEndKey: ""
+      objectTracking3DEventObjectTracking3D: !<reference.ObjectTracking3D> 00000000-0000-0000-0000-000000000000
+      objectTracking3DEventEventType: Tracking Started
+      landmarkerEventEventType: Location Found
+      landmarkerEventLocationTracking: !<reference.DeviceLocationTrackingComponent> 00000000-0000-0000-0000-000000000000
+      machineLearningEventEventType: Loading Finished
+      machineLearningEventMlComponent: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      recordingEventEventType: SnapRecordStartEvent
+      onCustomTriggerTriggerName: ""
+      onCustomTriggerTriggerNames: !<string[]>
+        []
+      onCustomTriggerUseList: false
+      physicsColliderEventCollider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+      physicsColliderEventCollisionType: Collision
+      physicsColliderEventEventType: On Enter
+      physicsColliderEventOverlapStatic: true
+      physicsColliderEventOverlapDynamic: true
+      physicsColliderEventOverlapIntangible: true
+      physicsColliderEventFilterObjectsBy: None
+      physicsColliderEventAllowedObjects: !<reference.ColliderComponent[]>
+        []
+      physicsColliderEventNameMatchType: Equals
+      physicsColliderEventAllowedNames: !<string[]>
+        []
+      physicsRaycastRaycastSource: touch
+      physicsRaycastSourceObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      physicsRaycastFlipForwardVec: false
+      physicsRaycastCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      physicsRaycastTapEvent: true
+      physicsRaycastTouchStartEvent: false
+      physicsRaycastTouchMoveEvent: false
+      physicsRaycastTouchEndEvent: false
+      physicsRaycastProbeType: global
+      physicsRaycastPhysicsWorld: !<reference.WorldComponent> 00000000-0000-0000-0000-000000000000
+      physicsRaycastMaxDistance: !<float> 10000.000000
+      physicsRaycastDebugDrawEnabled: false
+      physicsRaycastOverlapStatic: true
+      physicsRaycastOverlapDynamic: true
+      physicsRaycastOverlapIntangible: true
+      physicsRaycastFilterObjectsBy: None
+      physicsRaycastAllowedObjects: !<reference.ColliderComponent[]>
+        []
+      physicsRaycastNameMatchType: Equals
+      physicsRaycastAllowedNames: !<string[]>
+        []
+      triggerLimitType: Always
+      triggerInterval: !<float> 1.000000
+      triggerDelay: !<float> 0.000000
+      responseType: playSound
+      animateImageAnimatedTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      animateImageVisualObject: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      animateImageAction: Play or Resume
+      animateImageLoop: false
+      animateImagePauseFrame: 0
+      animateImageAdvanced: false
+      animateImagePingPong: false
+      animateImageReverse: false
+      animateMeshAnimationPlayerAnimationPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
+      animateMeshAnimationPlayerClipName: ""
+      animateMeshAnimationPlayerAction: Play or Resume
+      animateMeshAnimationPlayerWeight: !<float> 1.000000
+      animateMeshAnimationPlayerPlaybackMode: 0
+      animateMeshAnimationPlayerStopOtherLayers: true
+      playSoundAction: Play
+      playSoundAudioTrack: !<reference.AudioTrackAsset> 99fdfe5e-91d6-4658-8181-6c5db27c92dc
+      playSoundAudioComponent: !<reference.AudioComponent> 6f30b847-2333-4b5e-bf1e-e45c45f6d05f
+      playSoundLoop: false
+      playSoundVolume: !<float> 1.000000
+      playSoundFadeOut: false
+      playVideoVideoTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      playVideoVisualObject: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      playVideoAction: Play or Resume
+      playVideoLoop: false
+      setEnabledEntityType: SceneObject
+      setEnabledTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setEnabledTargetComponent: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      setEnabledAction: Enable
+      setParentTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setParentNewParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setParentPreserveWorldTransform: false
+      setColorVisual: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      setColorMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      setColorColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      setTextureTarget: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      setTextureNewTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      setTextComponentType: Text
+      setTextTextComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      setTextText3DComponent: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+      setTextText: ""
+      runTweenTargetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      runTweenTweenName: ""
+      runTweenAction: Start
+      setPositionObjectToMove: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setPositionPosition: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setPositionLocalSpace: true
+      setRotationObjectToRotate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setRotationRotationAngle: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setRotationLocalSpace: true
+      setScaleObjectToScale: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setScaleScale: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setScaleLocalSpace: true
+      setScreenPositionScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
+      setScreenPositionPositionType: Basic Position
+      setScreenPositionBasicPosition: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setScreenPositionAnchorsCenter: !<Vec2> {x: 0.000000, y: 0.000000}
+      setScreenPositionOffsetsCenter: !<Vec2> {x: 0.000000, y: 0.000000}
+      setScreenRotationScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
+      setScreenRotationAngle: !<float> 0.000000
+      setScreenSizeScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
+      setScreenSizeSizeType: Basic Scale
+      setScreenSizeBasicScale: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setScreenSizeAnchorsSize: !<Vec2> {x: 0.000000, y: 0.000000}
+      setScreenSizeOffsetsSize: !<Vec2> {x: 0.000000, y: 0.000000}
+      setBlendshapesV2MeshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      setBlendshapesV2Name: ""
+      setBlendshapesV2Weight: !<float> 0.000000
+      setMaterialParameterTargetType: Material
+      setMaterialParameterMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterMeshVisual: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterVFXAsset: !<reference.VFXAsset> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterVFXComponent: !<reference.VFXComponent> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterParameterName: ""
+      setMaterialParameterValueType: float
+      setMaterialParameterBoolValue: false
+      setMaterialParameterIntValue: 0
+      setMaterialParameterFloatValue: !<float> 0.000000
+      setMaterialParameterColorRGBValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setMaterialParameterColorRGBAValue: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      setMaterialParameterTextureValue: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterVec2Value: !<Vec2> {x: 0.000000, y: 0.000000}
+      setMaterialParameterVec3Value: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setMaterialParameterVec4Value: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      setTouchBlockingTargetType: Global Touches
+      setTouchBlockingGlobalTouchBlocking: true
+      setTouchBlockingTouchComponent: !<reference.InteractionComponent> 00000000-0000-0000-0000-000000000000
+      setTouchBlockingTouchTypeTouch: false
+      setTouchBlockingTouchTypeTap: false
+      setTouchBlockingTouchTypeDoubleTap: false
+      setTouchBlockingTouchTypeScale: false
+      setTouchBlockingTouchTypePan: false
+      setTouchBlockingTouchTypeSwipe: false
+      showHintHint: 0
+      showHintDuration: !<float> 2.000000
+      runMLMlComponent: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      runMLAction: Run Immediate
+      runMLSync: false
+      runMLRecurring: false
+      runMLStartTiming: 2
+      runMLEndTiming: 4
+      instantiatePrefabPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      instantiatePrefabParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      destroyObjectObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      printMessageText: ""
+      callScriptAPITargetType: Component
+      callScriptAPISceneObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      callScriptAPIComponent: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      callScriptAPICallType: 0
+      callScriptAPIFunctionName: ""
+      callScriptAPIPropertyName: ""
+      callScriptAPI_arg1ValueType: None
+      callScriptAPI_arg1BoolValue: false
+      callScriptAPI_arg1IntValue: 0
+      callScriptAPI_arg1FloatValue: !<float> 0.000000
+      callScriptAPI_arg1StringValue: ""
+      callScriptAPI_arg1ColorRGBValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_arg1ColorRGBAValue: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_arg1Vec2Value: !<Vec2> {x: 0.000000, y: 0.000000}
+      callScriptAPI_arg1Vec3Value: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_arg1Vec4Value: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_arg1QuatValue: !<Quat> {0: 0.000000, 1: 0.000000, 2: 0.000000, 3: 1.000000}
+      callScriptAPI_arg1SceneObjectValue: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg1AssetValue: !<reference.Asset> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg1TextureValue: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg1ComponentValue: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg1BoolArrayValue: !<bool[]>
+        []
+      callScriptAPI_arg1IntArrayValue: !<int[]>
+        []
+      callScriptAPI_arg1FloatArrayValue: !<float[]>
+        []
+      callScriptAPI_arg1StringArrayValue: !<string[]>
+        []
+      callScriptAPI_arg1Vec2ArrayValue: !<Vec2[]>
+        []
+      callScriptAPI_arg1Vec3ArrayValue: !<Vec3[]>
+        []
+      callScriptAPI_arg1Vec4ArrayValue: !<Vec4[]>
+        []
+      callScriptAPI_arg1QuatArrayValue: !<Quat[]>
+        []
+      callScriptAPI_arg1SceneObjectArrayValue: !<reference.SceneObject[]>
+        []
+      callScriptAPI_arg1AssetArrayValue: !<reference.Asset[]>
+        []
+      callScriptAPI_arg1TextureArrayValue: !<reference.Texture[]>
+        []
+      callScriptAPI_arg1ComponentArrayValue: !<reference.Component[]>
+        []
+      callScriptAPI_arg2ValueType: None
+      callScriptAPI_arg2BoolValue: false
+      callScriptAPI_arg2IntValue: 0
+      callScriptAPI_arg2FloatValue: !<float> 0.000000
+      callScriptAPI_arg2StringValue: ""
+      callScriptAPI_arg2ColorRGBValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_arg2ColorRGBAValue: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_arg2Vec2Value: !<Vec2> {x: 0.000000, y: 0.000000}
+      callScriptAPI_arg2Vec3Value: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_arg2Vec4Value: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_arg2QuatValue: !<Quat> {0: 0.000000, 1: 0.000000, 2: 0.000000, 3: 1.000000}
+      callScriptAPI_arg2SceneObjectValue: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg2AssetValue: !<reference.Asset> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg2TextureValue: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg2ComponentValue: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg2BoolArrayValue: !<bool[]>
+        []
+      callScriptAPI_arg2IntArrayValue: !<int[]>
+        []
+      callScriptAPI_arg2FloatArrayValue: !<float[]>
+        []
+      callScriptAPI_arg2StringArrayValue: !<string[]>
+        []
+      callScriptAPI_arg2Vec2ArrayValue: !<Vec2[]>
+        []
+      callScriptAPI_arg2Vec3ArrayValue: !<Vec3[]>
+        []
+      callScriptAPI_arg2Vec4ArrayValue: !<Vec4[]>
+        []
+      callScriptAPI_arg2QuatArrayValue: !<Quat[]>
+        []
+      callScriptAPI_arg2SceneObjectArrayValue: !<reference.SceneObject[]>
+        []
+      callScriptAPI_arg2AssetArrayValue: !<reference.Asset[]>
+        []
+      callScriptAPI_arg2TextureArrayValue: !<reference.Texture[]>
+        []
+      callScriptAPI_arg2ComponentArrayValue: !<reference.Component[]>
+        []
+      callScriptAPI_valueValueType: float
+      callScriptAPI_valueBoolValue: false
+      callScriptAPI_valueIntValue: 0
+      callScriptAPI_valueFloatValue: !<float> 0.000000
+      callScriptAPI_valueStringValue: ""
+      callScriptAPI_valueColorRGBValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_valueColorRGBAValue: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_valueVec2Value: !<Vec2> {x: 0.000000, y: 0.000000}
+      callScriptAPI_valueVec3Value: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_valueVec4Value: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_valueQuatValue: !<Quat> {0: 0.000000, 1: 0.000000, 2: 0.000000, 3: 1.000000}
+      callScriptAPI_valueSceneObjectValue: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_valueAssetValue: !<reference.Asset> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_valueTextureValue: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_valueComponentValue: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_valueBoolArrayValue: !<bool[]>
+        []
+      callScriptAPI_valueIntArrayValue: !<int[]>
+        []
+      callScriptAPI_valueFloatArrayValue: !<float[]>
+        []
+      callScriptAPI_valueStringArrayValue: !<string[]>
+        []
+      callScriptAPI_valueVec2ArrayValue: !<Vec2[]>
+        []
+      callScriptAPI_valueVec3ArrayValue: !<Vec3[]>
+        []
+      callScriptAPI_valueVec4ArrayValue: !<Vec4[]>
+        []
+      callScriptAPI_valueQuatArrayValue: !<Quat[]>
+        []
+      callScriptAPI_valueSceneObjectArrayValue: !<reference.SceneObject[]>
+        []
+      callScriptAPI_valueAssetArrayValue: !<reference.Asset[]>
+        []
+      callScriptAPI_valueTextureArrayValue: !<reference.Texture[]>
+        []
+      callScriptAPI_valueComponentArrayValue: !<reference.Component[]>
+        []
+      sendCustomTriggerTriggerName: ""
+      sendCustomTriggerTriggerNames: !<string[]>
+        []
+      sendCustomTriggerUseList: false
+      sendCustomTriggerLoopAfterEnd: true
+      physicsApplyForceBody: !<reference.BodyComponent> 00000000-0000-0000-0000-000000000000
+      physicsApplyForceForceType: Position
+      physicsApplyForceMode: Impulse
+      physicsApplyForceForceValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      physicsApplyForceSpace: World
+      physicsApplyForceObjectSpace: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sceneManagerLoadSceneSceneName: ""
+      sceneManagerLoadSceneLoadType: Asynchronous
+      sceneManagerLoadSceneLoadAdditively: true
+      sceneManagerLoadSceneLoadEnabled: true
+      sceneManagerLoadSceneCustomizeSceneRoot: false
+      sceneManagerLoadSceneSceneRootObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sceneManagerLoadSceneUseLoadingScene: false
+      sceneManagerLoadSceneLoadingSceneName: ""
+      sceneManagerLoadSceneCallbackOnProgress: false
+      sceneManagerLoadSceneOnProgressCallbackScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      sceneManagerLoadSceneOnProgressCallbackFunctionName: ""
+      sceneManagerLoadSceneCallbackOnComplete: false
+      sceneManagerLoadSceneOnCompleteCallbackScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      sceneManagerLoadSceneOnCompleteCallbackFunctionName: ""
+      animateMeshAnimationMixer: !<reference.AnimationMixer> 00000000-0000-0000-0000-000000000000
+      animateMeshLayerName: ""
+      animateMeshAction: Play or Resume
+      animateMeshWeight: !<float> 1.000000
+      animateMeshLoop: false
+      animateMeshStopOtherLayers: true
+  ScriptTypes:
+    "":
+      {}
+- !<AudioComponent/08c0a63e-ec7e-496c-bc99-8f8c18f98c98>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 99fdfe5e-91d6-4658-8181-6c5db27c92dc
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
+- !<ScriptComponent/0d2ee673-25f4-4df2-8f8a-2324ed31374e>
+  PrefabRemaps:
+    []
+  Name: Behavior
+  Enabled: true
+  ScriptAsset: !<reference> 6723cdea-93b3-4652-812f-c9c36a7ddb0f
+  ScriptInputsDefault:
+    touchEventEventType: true
+    touchEventTouchTarget: true
+    faceEventEventType: true
+    faceEventFaceIndex: true
+    onEnabledObject: true
+    onDisabledObject: true
+    interactionEventEventType: true
+    interactionEventTarget: true
+    animType: true
+    animationEndAnimatedTexture: true
+    animationEndImageVisual: true
+    animationEndAnimMixer: true
+    animationEndAnimLayerName: true
+    animationEndAnimPlayer: true
+    animationEndAnimClipName: true
+    tweenEndTargetObject: true
+    tweenEndTweenName: true
+    lookingAtLookingObject: true
+    lookingAtLookTarget: true
+    lookingAtFlipForwardVec: true
+    lookingAtCompareType: true
+    lookingAtAngle: true
+    lookingAtAllowRepeat: true
+    boundsCheckObject: true
+    boundsCheckBoundaryMeshVisual: true
+    boundsCheckTriggerOptions: true
+    distanceCheckObjectA: true
+    distanceCheckObjectB: true
+    distanceCheckCompareType: true
+    distanceCheckDistance: true
+    distanceCheckAllowRepeat: true
+    distanceCheckFlattenZForScreenTransforms: true
+    markerTrackingEventEventType: true
+    markerTrackingEventMarkerTracking: true
+    objectTrackingEventEventType: true
+    objectTrackingEventObjectTracking: true
+    objectTrackingEventDescStartKey: true
+    objectTrackingEventDescEndKey: true
+    objectTracking3DEventObjectTracking3D: true
+    objectTracking3DEventEventType: true
+    landmarkerEventEventType: true
+    landmarkerEventLocationTracking: true
+    machineLearningEventEventType: true
+    machineLearningEventMlComponent: true
+    recordingEventEventType: true
+    onCustomTriggerTriggerName: true
+    onCustomTriggerTriggerNames: true
+    onCustomTriggerUseList: true
+    physicsColliderEventCollider: true
+    physicsColliderEventCollisionType: true
+    physicsColliderEventEventType: true
+    physicsColliderEventOverlapStatic: true
+    physicsColliderEventOverlapDynamic: true
+    physicsColliderEventOverlapIntangible: true
+    physicsColliderEventFilterObjectsBy: true
+    physicsColliderEventAllowedObjects: true
+    physicsColliderEventNameMatchType: true
+    physicsColliderEventAllowedNames: true
+    physicsRaycastRaycastSource: true
+    physicsRaycastSourceObject: true
+    physicsRaycastFlipForwardVec: true
+    physicsRaycastCamera: true
+    physicsRaycastTapEvent: true
+    physicsRaycastTouchStartEvent: true
+    physicsRaycastTouchMoveEvent: true
+    physicsRaycastTouchEndEvent: true
+    physicsRaycastProbeType: true
+    physicsRaycastPhysicsWorld: true
+    physicsRaycastMaxDistance: true
+    physicsRaycastDebugDrawEnabled: true
+    physicsRaycastOverlapStatic: true
+    physicsRaycastOverlapDynamic: true
+    physicsRaycastOverlapIntangible: true
+    physicsRaycastFilterObjectsBy: true
+    physicsRaycastAllowedObjects: true
+    physicsRaycastNameMatchType: true
+    physicsRaycastAllowedNames: true
+    triggerLimitType: true
+    triggerInterval: true
+    triggerDelay: true
+    animateImageAnimatedTexture: true
+    animateImageVisualObject: true
+    animateImageAction: true
+    animateImageLoop: true
+    animateImagePauseFrame: true
+    animateImageAdvanced: true
+    animateImagePingPong: true
+    animateImageReverse: true
+    animateMeshAnimationPlayerAnimationPlayer: true
+    animateMeshAnimationPlayerClipName: true
+    animateMeshAnimationPlayerAction: true
+    animateMeshAnimationPlayerWeight: true
+    animateMeshAnimationPlayerPlaybackMode: true
+    animateMeshAnimationPlayerStopOtherLayers: true
+    playSoundAction: true
+    playSoundAudioTrack: true
+    playSoundAudioComponent: true
+    playSoundLoop: true
+    playSoundVolume: true
+    playSoundFadeOut: true
+    playVideoVideoTexture: true
+    playVideoVisualObject: true
+    playVideoAction: true
+    playVideoLoop: true
+    setEnabledEntityType: true
+    setEnabledTarget: true
+    setEnabledTargetComponent: true
+    setEnabledAction: true
+    setParentTarget: true
+    setParentNewParent: true
+    setParentPreserveWorldTransform: true
+    setColorVisual: true
+    setColorMaterial: true
+    setColorColor: true
+    setTextureTarget: true
+    setTextureNewTexture: true
+    setTextComponentType: true
+    setTextTextComponent: true
+    setTextText3DComponent: true
+    setTextText: true
+    runTweenTargetObject: true
+    runTweenTweenName: true
+    runTweenAction: true
+    setPositionObjectToMove: true
+    setPositionPosition: true
+    setPositionLocalSpace: true
+    setRotationObjectToRotate: true
+    setRotationRotationAngle: true
+    setRotationLocalSpace: true
+    setScaleObjectToScale: true
+    setScaleScale: true
+    setScaleLocalSpace: true
+    setScreenPositionScreenTransform: true
+    setScreenPositionPositionType: true
+    setScreenPositionBasicPosition: true
+    setScreenPositionAnchorsCenter: true
+    setScreenPositionOffsetsCenter: true
+    setScreenRotationScreenTransform: true
+    setScreenRotationAngle: true
+    setScreenSizeScreenTransform: true
+    setScreenSizeSizeType: true
+    setScreenSizeBasicScale: true
+    setScreenSizeAnchorsSize: true
+    setScreenSizeOffsetsSize: true
+    setBlendshapesV2MeshVisual: true
+    setBlendshapesV2Name: true
+    setBlendshapesV2Weight: true
+    setMaterialParameterTargetType: true
+    setMaterialParameterMaterial: true
+    setMaterialParameterMeshVisual: true
+    setMaterialParameterVFXAsset: true
+    setMaterialParameterVFXComponent: true
+    setMaterialParameterParameterName: true
+    setMaterialParameterValueType: true
+    setMaterialParameterBoolValue: true
+    setMaterialParameterIntValue: true
+    setMaterialParameterFloatValue: true
+    setMaterialParameterColorRGBValue: true
+    setMaterialParameterColorRGBAValue: true
+    setMaterialParameterTextureValue: true
+    setMaterialParameterVec2Value: true
+    setMaterialParameterVec3Value: true
+    setMaterialParameterVec4Value: true
+    setTouchBlockingTargetType: true
+    setTouchBlockingGlobalTouchBlocking: true
+    setTouchBlockingTouchComponent: true
+    setTouchBlockingTouchTypeTouch: true
+    setTouchBlockingTouchTypeTap: true
+    setTouchBlockingTouchTypeDoubleTap: true
+    setTouchBlockingTouchTypeScale: true
+    setTouchBlockingTouchTypePan: true
+    setTouchBlockingTouchTypeSwipe: true
+    showHintHint: true
+    showHintDuration: true
+    runMLMlComponent: true
+    runMLAction: true
+    runMLSync: true
+    runMLRecurring: true
+    runMLStartTiming: true
+    runMLEndTiming: true
+    instantiatePrefabPrefab: true
+    instantiatePrefabParent: true
+    destroyObjectObject: true
+    printMessageText: true
+    callScriptAPITargetType: true
+    callScriptAPISceneObject: true
+    callScriptAPIComponent: true
+    callScriptAPICallType: true
+    callScriptAPIFunctionName: true
+    callScriptAPIPropertyName: true
+    callScriptAPI_arg1ValueType: true
+    callScriptAPI_arg1BoolValue: true
+    callScriptAPI_arg1IntValue: true
+    callScriptAPI_arg1FloatValue: true
+    callScriptAPI_arg1StringValue: true
+    callScriptAPI_arg1ColorRGBValue: true
+    callScriptAPI_arg1ColorRGBAValue: true
+    callScriptAPI_arg1Vec2Value: true
+    callScriptAPI_arg1Vec3Value: true
+    callScriptAPI_arg1Vec4Value: true
+    callScriptAPI_arg1QuatValue: true
+    callScriptAPI_arg1SceneObjectValue: true
+    callScriptAPI_arg1AssetValue: true
+    callScriptAPI_arg1TextureValue: true
+    callScriptAPI_arg1ComponentValue: true
+    callScriptAPI_arg1BoolArrayValue: true
+    callScriptAPI_arg1IntArrayValue: true
+    callScriptAPI_arg1FloatArrayValue: true
+    callScriptAPI_arg1StringArrayValue: true
+    callScriptAPI_arg1Vec2ArrayValue: true
+    callScriptAPI_arg1Vec3ArrayValue: true
+    callScriptAPI_arg1Vec4ArrayValue: true
+    callScriptAPI_arg1QuatArrayValue: true
+    callScriptAPI_arg1SceneObjectArrayValue: true
+    callScriptAPI_arg1AssetArrayValue: true
+    callScriptAPI_arg1TextureArrayValue: true
+    callScriptAPI_arg1ComponentArrayValue: true
+    callScriptAPI_arg2ValueType: true
+    callScriptAPI_arg2BoolValue: true
+    callScriptAPI_arg2IntValue: true
+    callScriptAPI_arg2FloatValue: true
+    callScriptAPI_arg2StringValue: true
+    callScriptAPI_arg2ColorRGBValue: true
+    callScriptAPI_arg2ColorRGBAValue: true
+    callScriptAPI_arg2Vec2Value: true
+    callScriptAPI_arg2Vec3Value: true
+    callScriptAPI_arg2Vec4Value: true
+    callScriptAPI_arg2QuatValue: true
+    callScriptAPI_arg2SceneObjectValue: true
+    callScriptAPI_arg2AssetValue: true
+    callScriptAPI_arg2TextureValue: true
+    callScriptAPI_arg2ComponentValue: true
+    callScriptAPI_arg2BoolArrayValue: true
+    callScriptAPI_arg2IntArrayValue: true
+    callScriptAPI_arg2FloatArrayValue: true
+    callScriptAPI_arg2StringArrayValue: true
+    callScriptAPI_arg2Vec2ArrayValue: true
+    callScriptAPI_arg2Vec3ArrayValue: true
+    callScriptAPI_arg2Vec4ArrayValue: true
+    callScriptAPI_arg2QuatArrayValue: true
+    callScriptAPI_arg2SceneObjectArrayValue: true
+    callScriptAPI_arg2AssetArrayValue: true
+    callScriptAPI_arg2TextureArrayValue: true
+    callScriptAPI_arg2ComponentArrayValue: true
+    callScriptAPI_valueValueType: true
+    callScriptAPI_valueBoolValue: true
+    callScriptAPI_valueIntValue: true
+    callScriptAPI_valueFloatValue: true
+    callScriptAPI_valueStringValue: true
+    callScriptAPI_valueColorRGBValue: true
+    callScriptAPI_valueColorRGBAValue: true
+    callScriptAPI_valueVec2Value: true
+    callScriptAPI_valueVec3Value: true
+    callScriptAPI_valueVec4Value: true
+    callScriptAPI_valueQuatValue: true
+    callScriptAPI_valueSceneObjectValue: true
+    callScriptAPI_valueAssetValue: true
+    callScriptAPI_valueTextureValue: true
+    callScriptAPI_valueComponentValue: true
+    callScriptAPI_valueBoolArrayValue: true
+    callScriptAPI_valueIntArrayValue: true
+    callScriptAPI_valueFloatArrayValue: true
+    callScriptAPI_valueStringArrayValue: true
+    callScriptAPI_valueVec2ArrayValue: true
+    callScriptAPI_valueVec3ArrayValue: true
+    callScriptAPI_valueVec4ArrayValue: true
+    callScriptAPI_valueQuatArrayValue: true
+    callScriptAPI_valueSceneObjectArrayValue: true
+    callScriptAPI_valueAssetArrayValue: true
+    callScriptAPI_valueTextureArrayValue: true
+    callScriptAPI_valueComponentArrayValue: true
+    sendCustomTriggerTriggerName: true
+    sendCustomTriggerTriggerNames: true
+    sendCustomTriggerUseList: true
+    sendCustomTriggerLoopAfterEnd: true
+    physicsApplyForceBody: true
+    physicsApplyForceForceType: true
+    physicsApplyForceMode: true
+    physicsApplyForceForceValue: true
+    physicsApplyForceSpace: true
+    physicsApplyForceObjectSpace: true
+    sceneManagerLoadSceneSceneName: true
+    sceneManagerLoadSceneLoadType: true
+    sceneManagerLoadSceneLoadAdditively: true
+    sceneManagerLoadSceneLoadEnabled: true
+    sceneManagerLoadSceneCustomizeSceneRoot: true
+    sceneManagerLoadSceneSceneRootObject: true
+    sceneManagerLoadSceneUseLoadingScene: true
+    sceneManagerLoadSceneLoadingSceneName: true
+    sceneManagerLoadSceneCallbackOnProgress: true
+    sceneManagerLoadSceneOnProgressCallbackScriptComponent: true
+    sceneManagerLoadSceneOnProgressCallbackFunctionName: true
+    sceneManagerLoadSceneCallbackOnComplete: true
+    sceneManagerLoadSceneOnCompleteCallbackScriptComponent: true
+    sceneManagerLoadSceneOnCompleteCallbackFunctionName: true
+    animateMeshAnimationMixer: true
+    animateMeshLayerName: true
+    animateMeshAction: true
+    animateMeshWeight: true
+    animateMeshLoop: true
+    animateMeshStopOtherLayers: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      triggeringEventType: TurnOnEvent
+      touchEventEventType: TapEvent
+      touchEventTouchTarget: !<reference.BaseMeshVisual> 00000000-0000-0000-0000-000000000000
+      faceEventEventType: MouthOpenedEvent
+      faceEventFaceIndex: 0
+      onEnabledObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      onDisabledObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      interactionEventEventType: onTap
+      interactionEventTarget: !<reference.BaseMeshVisual> 00000000-0000-0000-0000-000000000000
+      animType: Animated Texture
+      animationEndAnimatedTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      animationEndImageVisual: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      animationEndAnimMixer: !<reference.AnimationMixer> 00000000-0000-0000-0000-000000000000
+      animationEndAnimLayerName: ""
+      animationEndAnimPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
+      animationEndAnimClipName: ""
+      tweenEndTargetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      tweenEndTweenName: ""
+      lookingAtLookingObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lookingAtLookTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lookingAtFlipForwardVec: true
+      lookingAtCompareType: -1
+      lookingAtAngle: !<float> 10.000000
+      lookingAtAllowRepeat: false
+      boundsCheckObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      boundsCheckBoundaryMeshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      boundsCheckTriggerOptions: On Enter
+      distanceCheckObjectA: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      distanceCheckObjectB: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      distanceCheckCompareType: -1
+      distanceCheckDistance: !<float> 1.000000
+      distanceCheckAllowRepeat: false
+      distanceCheckFlattenZForScreenTransforms: true
+      markerTrackingEventEventType: Marker Found
+      markerTrackingEventMarkerTracking: !<reference.MarkerTrackingComponent> 00000000-0000-0000-0000-000000000000
+      objectTrackingEventEventType: Object Found
+      objectTrackingEventObjectTracking: !<reference.ObjectTracking> 00000000-0000-0000-0000-000000000000
+      objectTrackingEventDescStartKey: ""
+      objectTrackingEventDescEndKey: ""
+      objectTracking3DEventObjectTracking3D: !<reference.ObjectTracking3D> 00000000-0000-0000-0000-000000000000
+      objectTracking3DEventEventType: Tracking Started
+      landmarkerEventEventType: Location Found
+      landmarkerEventLocationTracking: !<reference.DeviceLocationTrackingComponent> 00000000-0000-0000-0000-000000000000
+      machineLearningEventEventType: Loading Finished
+      machineLearningEventMlComponent: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      recordingEventEventType: SnapRecordStartEvent
+      onCustomTriggerTriggerName: ""
+      onCustomTriggerTriggerNames: !<string[]>
+        []
+      onCustomTriggerUseList: false
+      physicsColliderEventCollider: !<reference.ColliderComponent> 00000000-0000-0000-0000-000000000000
+      physicsColliderEventCollisionType: Collision
+      physicsColliderEventEventType: On Enter
+      physicsColliderEventOverlapStatic: true
+      physicsColliderEventOverlapDynamic: true
+      physicsColliderEventOverlapIntangible: true
+      physicsColliderEventFilterObjectsBy: None
+      physicsColliderEventAllowedObjects: !<reference.ColliderComponent[]>
+        []
+      physicsColliderEventNameMatchType: Equals
+      physicsColliderEventAllowedNames: !<string[]>
+        []
+      physicsRaycastRaycastSource: touch
+      physicsRaycastSourceObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      physicsRaycastFlipForwardVec: false
+      physicsRaycastCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      physicsRaycastTapEvent: true
+      physicsRaycastTouchStartEvent: false
+      physicsRaycastTouchMoveEvent: false
+      physicsRaycastTouchEndEvent: false
+      physicsRaycastProbeType: global
+      physicsRaycastPhysicsWorld: !<reference.WorldComponent> 00000000-0000-0000-0000-000000000000
+      physicsRaycastMaxDistance: !<float> 10000.000000
+      physicsRaycastDebugDrawEnabled: false
+      physicsRaycastOverlapStatic: true
+      physicsRaycastOverlapDynamic: true
+      physicsRaycastOverlapIntangible: true
+      physicsRaycastFilterObjectsBy: None
+      physicsRaycastAllowedObjects: !<reference.ColliderComponent[]>
+        []
+      physicsRaycastNameMatchType: Equals
+      physicsRaycastAllowedNames: !<string[]>
+        []
+      triggerLimitType: Always
+      triggerInterval: !<float> 1.000000
+      triggerDelay: !<float> 0.000000
+      responseType: playSound
+      animateImageAnimatedTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      animateImageVisualObject: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      animateImageAction: Play or Resume
+      animateImageLoop: false
+      animateImagePauseFrame: 0
+      animateImageAdvanced: false
+      animateImagePingPong: false
+      animateImageReverse: false
+      animateMeshAnimationPlayerAnimationPlayer: !<reference.AnimationPlayer> 00000000-0000-0000-0000-000000000000
+      animateMeshAnimationPlayerClipName: ""
+      animateMeshAnimationPlayerAction: Play or Resume
+      animateMeshAnimationPlayerWeight: !<float> 1.000000
+      animateMeshAnimationPlayerPlaybackMode: 0
+      animateMeshAnimationPlayerStopOtherLayers: true
+      playSoundAction: Play
+      playSoundAudioTrack: !<reference.AudioTrackAsset> 00000000-0000-0000-0000-000000000000
+      playSoundAudioComponent: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      playSoundLoop: false
+      playSoundVolume: !<float> 1.000000
+      playSoundFadeOut: false
+      playVideoVideoTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      playVideoVisualObject: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      playVideoAction: Play or Resume
+      playVideoLoop: false
+      setEnabledEntityType: SceneObject
+      setEnabledTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setEnabledTargetComponent: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      setEnabledAction: Enable
+      setParentTarget: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setParentNewParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setParentPreserveWorldTransform: false
+      setColorVisual: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      setColorMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      setColorColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      setTextureTarget: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      setTextureNewTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      setTextComponentType: Text
+      setTextTextComponent: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      setTextText3DComponent: !<reference.Text3D> 00000000-0000-0000-0000-000000000000
+      setTextText: ""
+      runTweenTargetObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      runTweenTweenName: ""
+      runTweenAction: Start
+      setPositionObjectToMove: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setPositionPosition: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setPositionLocalSpace: true
+      setRotationObjectToRotate: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setRotationRotationAngle: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setRotationLocalSpace: true
+      setScaleObjectToScale: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      setScaleScale: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setScaleLocalSpace: true
+      setScreenPositionScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
+      setScreenPositionPositionType: Basic Position
+      setScreenPositionBasicPosition: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setScreenPositionAnchorsCenter: !<Vec2> {x: 0.000000, y: 0.000000}
+      setScreenPositionOffsetsCenter: !<Vec2> {x: 0.000000, y: 0.000000}
+      setScreenRotationScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
+      setScreenRotationAngle: !<float> 0.000000
+      setScreenSizeScreenTransform: !<reference.ScreenTransform> 00000000-0000-0000-0000-000000000000
+      setScreenSizeSizeType: Basic Scale
+      setScreenSizeBasicScale: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setScreenSizeAnchorsSize: !<Vec2> {x: 0.000000, y: 0.000000}
+      setScreenSizeOffsetsSize: !<Vec2> {x: 0.000000, y: 0.000000}
+      setBlendshapesV2MeshVisual: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
+      setBlendshapesV2Name: ""
+      setBlendshapesV2Weight: !<float> 0.000000
+      setMaterialParameterTargetType: Material
+      setMaterialParameterMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterMeshVisual: !<reference.MaterialMeshVisual> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterVFXAsset: !<reference.VFXAsset> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterVFXComponent: !<reference.VFXComponent> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterParameterName: ""
+      setMaterialParameterValueType: float
+      setMaterialParameterBoolValue: false
+      setMaterialParameterIntValue: 0
+      setMaterialParameterFloatValue: !<float> 0.000000
+      setMaterialParameterColorRGBValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setMaterialParameterColorRGBAValue: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      setMaterialParameterTextureValue: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      setMaterialParameterVec2Value: !<Vec2> {x: 0.000000, y: 0.000000}
+      setMaterialParameterVec3Value: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      setMaterialParameterVec4Value: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      setTouchBlockingTargetType: Global Touches
+      setTouchBlockingGlobalTouchBlocking: true
+      setTouchBlockingTouchComponent: !<reference.InteractionComponent> 00000000-0000-0000-0000-000000000000
+      setTouchBlockingTouchTypeTouch: false
+      setTouchBlockingTouchTypeTap: false
+      setTouchBlockingTouchTypeDoubleTap: false
+      setTouchBlockingTouchTypeScale: false
+      setTouchBlockingTouchTypePan: false
+      setTouchBlockingTouchTypeSwipe: false
+      showHintHint: 0
+      showHintDuration: !<float> 2.000000
+      runMLMlComponent: !<reference.MLComponent> 00000000-0000-0000-0000-000000000000
+      runMLAction: Run Immediate
+      runMLSync: false
+      runMLRecurring: false
+      runMLStartTiming: 2
+      runMLEndTiming: 4
+      instantiatePrefabPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      instantiatePrefabParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      destroyObjectObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      printMessageText: ""
+      callScriptAPITargetType: Component
+      callScriptAPISceneObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      callScriptAPIComponent: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      callScriptAPICallType: 0
+      callScriptAPIFunctionName: ""
+      callScriptAPIPropertyName: ""
+      callScriptAPI_arg1ValueType: None
+      callScriptAPI_arg1BoolValue: false
+      callScriptAPI_arg1IntValue: 0
+      callScriptAPI_arg1FloatValue: !<float> 0.000000
+      callScriptAPI_arg1StringValue: ""
+      callScriptAPI_arg1ColorRGBValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_arg1ColorRGBAValue: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_arg1Vec2Value: !<Vec2> {x: 0.000000, y: 0.000000}
+      callScriptAPI_arg1Vec3Value: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_arg1Vec4Value: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_arg1QuatValue: !<Quat> {0: 0.000000, 1: 0.000000, 2: 0.000000, 3: 1.000000}
+      callScriptAPI_arg1SceneObjectValue: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg1AssetValue: !<reference.Asset> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg1TextureValue: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg1ComponentValue: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg1BoolArrayValue: !<bool[]>
+        []
+      callScriptAPI_arg1IntArrayValue: !<int[]>
+        []
+      callScriptAPI_arg1FloatArrayValue: !<float[]>
+        []
+      callScriptAPI_arg1StringArrayValue: !<string[]>
+        []
+      callScriptAPI_arg1Vec2ArrayValue: !<Vec2[]>
+        []
+      callScriptAPI_arg1Vec3ArrayValue: !<Vec3[]>
+        []
+      callScriptAPI_arg1Vec4ArrayValue: !<Vec4[]>
+        []
+      callScriptAPI_arg1QuatArrayValue: !<Quat[]>
+        []
+      callScriptAPI_arg1SceneObjectArrayValue: !<reference.SceneObject[]>
+        []
+      callScriptAPI_arg1AssetArrayValue: !<reference.Asset[]>
+        []
+      callScriptAPI_arg1TextureArrayValue: !<reference.Texture[]>
+        []
+      callScriptAPI_arg1ComponentArrayValue: !<reference.Component[]>
+        []
+      callScriptAPI_arg2ValueType: None
+      callScriptAPI_arg2BoolValue: false
+      callScriptAPI_arg2IntValue: 0
+      callScriptAPI_arg2FloatValue: !<float> 0.000000
+      callScriptAPI_arg2StringValue: ""
+      callScriptAPI_arg2ColorRGBValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_arg2ColorRGBAValue: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_arg2Vec2Value: !<Vec2> {x: 0.000000, y: 0.000000}
+      callScriptAPI_arg2Vec3Value: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_arg2Vec4Value: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_arg2QuatValue: !<Quat> {0: 0.000000, 1: 0.000000, 2: 0.000000, 3: 1.000000}
+      callScriptAPI_arg2SceneObjectValue: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg2AssetValue: !<reference.Asset> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg2TextureValue: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg2ComponentValue: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_arg2BoolArrayValue: !<bool[]>
+        []
+      callScriptAPI_arg2IntArrayValue: !<int[]>
+        []
+      callScriptAPI_arg2FloatArrayValue: !<float[]>
+        []
+      callScriptAPI_arg2StringArrayValue: !<string[]>
+        []
+      callScriptAPI_arg2Vec2ArrayValue: !<Vec2[]>
+        []
+      callScriptAPI_arg2Vec3ArrayValue: !<Vec3[]>
+        []
+      callScriptAPI_arg2Vec4ArrayValue: !<Vec4[]>
+        []
+      callScriptAPI_arg2QuatArrayValue: !<Quat[]>
+        []
+      callScriptAPI_arg2SceneObjectArrayValue: !<reference.SceneObject[]>
+        []
+      callScriptAPI_arg2AssetArrayValue: !<reference.Asset[]>
+        []
+      callScriptAPI_arg2TextureArrayValue: !<reference.Texture[]>
+        []
+      callScriptAPI_arg2ComponentArrayValue: !<reference.Component[]>
+        []
+      callScriptAPI_valueValueType: float
+      callScriptAPI_valueBoolValue: false
+      callScriptAPI_valueIntValue: 0
+      callScriptAPI_valueFloatValue: !<float> 0.000000
+      callScriptAPI_valueStringValue: ""
+      callScriptAPI_valueColorRGBValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_valueColorRGBAValue: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_valueVec2Value: !<Vec2> {x: 0.000000, y: 0.000000}
+      callScriptAPI_valueVec3Value: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      callScriptAPI_valueVec4Value: !<Vec4> {x: 0.000000, y: 0.000000, z: 0.000000, w: 0.000000}
+      callScriptAPI_valueQuatValue: !<Quat> {0: 0.000000, 1: 0.000000, 2: 0.000000, 3: 1.000000}
+      callScriptAPI_valueSceneObjectValue: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_valueAssetValue: !<reference.Asset> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_valueTextureValue: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_valueComponentValue: !<reference.Component> 00000000-0000-0000-0000-000000000000
+      callScriptAPI_valueBoolArrayValue: !<bool[]>
+        []
+      callScriptAPI_valueIntArrayValue: !<int[]>
+        []
+      callScriptAPI_valueFloatArrayValue: !<float[]>
+        []
+      callScriptAPI_valueStringArrayValue: !<string[]>
+        []
+      callScriptAPI_valueVec2ArrayValue: !<Vec2[]>
+        []
+      callScriptAPI_valueVec3ArrayValue: !<Vec3[]>
+        []
+      callScriptAPI_valueVec4ArrayValue: !<Vec4[]>
+        []
+      callScriptAPI_valueQuatArrayValue: !<Quat[]>
+        []
+      callScriptAPI_valueSceneObjectArrayValue: !<reference.SceneObject[]>
+        []
+      callScriptAPI_valueAssetArrayValue: !<reference.Asset[]>
+        []
+      callScriptAPI_valueTextureArrayValue: !<reference.Texture[]>
+        []
+      callScriptAPI_valueComponentArrayValue: !<reference.Component[]>
+        []
+      sendCustomTriggerTriggerName: ""
+      sendCustomTriggerTriggerNames: !<string[]>
+        []
+      sendCustomTriggerUseList: false
+      sendCustomTriggerLoopAfterEnd: true
+      physicsApplyForceBody: !<reference.BodyComponent> 00000000-0000-0000-0000-000000000000
+      physicsApplyForceForceType: Position
+      physicsApplyForceMode: Impulse
+      physicsApplyForceForceValue: !<Vec3> {x: 0.000000, y: 0.000000, z: 0.000000}
+      physicsApplyForceSpace: World
+      physicsApplyForceObjectSpace: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sceneManagerLoadSceneSceneName: ""
+      sceneManagerLoadSceneLoadType: Asynchronous
+      sceneManagerLoadSceneLoadAdditively: true
+      sceneManagerLoadSceneLoadEnabled: true
+      sceneManagerLoadSceneCustomizeSceneRoot: false
+      sceneManagerLoadSceneSceneRootObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      sceneManagerLoadSceneUseLoadingScene: false
+      sceneManagerLoadSceneLoadingSceneName: ""
+      sceneManagerLoadSceneCallbackOnProgress: false
+      sceneManagerLoadSceneOnProgressCallbackScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      sceneManagerLoadSceneOnProgressCallbackFunctionName: ""
+      sceneManagerLoadSceneCallbackOnComplete: false
+      sceneManagerLoadSceneOnCompleteCallbackScriptComponent: !<reference.ScriptComponent> 00000000-0000-0000-0000-000000000000
+      sceneManagerLoadSceneOnCompleteCallbackFunctionName: ""
+      animateMeshAnimationMixer: !<reference.AnimationMixer> 00000000-0000-0000-0000-000000000000
+      animateMeshLayerName: ""
+      animateMeshAction: Play or Resume
+      animateMeshWeight: !<float> 1.000000
+      animateMeshLoop: false
+      animateMeshStopOtherLayers: true
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/0db12e22-e7e4-4167-bb90-11322be05786>
   PrefabRemaps:
     []
@@ -498,7 +1836,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: -36.048962, z: -147.500000}
+    Position: {x: 41.558689, y: -7.871956, z: -147.500000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 3.125000, y: 3.125000, z: 3.125000}
     HasSegmentScaleCompensation: false
@@ -513,7 +1851,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 41.870037, z: -147.500000}
+    Position: {x: 41.697006, y: 79.242874, z: -147.500000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 3.125000, y: 3.125000, z: 3.125000}
     HasSegmentScaleCompensation: false
@@ -1668,6 +3006,22 @@
     - !<own> da31d502-20f7-4e8f-8ac9-adca9b659268
   Components:
     []
+- !<SceneObject/5503ce61-4030-4cf2-9795-1f978e1aca94>
+  PrefabRemaps:
+    - 5503ce61-4030-4cf2-9795-1f978e1aca94: ffe12c89-ded1-4247-85d7-54d05be5afdd
+    - 95fef702-f717-4fb0-8964-c5fc894601df: 6abade30-5a2c-42be-bb98-7dbbeea9c8db
+  Name: SparklesVFX
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -40.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 95fef702-f717-4fb0-8964-c5fc894601df
 - !<SceneObject/5544eb4f-daa7-4441-84cd-b06ac2bda1b6>
   PrefabRemaps:
     []
@@ -2162,6 +3516,23 @@
     - !<own> b376ea46-bee6-4eac-82cc-1f09a4389f34
   Components:
     []
+- !<AudioComponent/6f30b847-2333-4b5e-bf1e-e45c45f6d05f>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: false
+  AudioTrack: !<reference> ed748731-33a7-467b-a69b-8a766dceeb2f
+  EnableAutoplayLoop: true
+  Volume: 0.800000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
 - !<SceneObject/71dbdbcb-fedd-46c0-adcb-e1f2e8b92f5d>
   PrefabRemaps:
     []
@@ -2237,14 +3608,15 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 48.872009, z: -147.500000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Position: {x: -24.133379, y: 35.213268, z: -165.200623}
+    Rotation: {x: -0.000000, y: 0.000000, z: 0.000000}
     Scale: {x: 50.000000, y: 50.000000, z: 50.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
   Components:
     - !<own> 030a9acb-4fca-4732-bb78-9c78865a9269
+    - !<own> af2821a6-15a0-4224-8028-ee29cc727d53
 - !<SceneObject/7747c579-b049-4c0d-bd9b-db409ed1a845>
   PrefabRemaps:
     []
@@ -2804,6 +4176,19 @@
     - !<own> a4be667c-356e-4cf4-81ef-21e3e55cb1c2
   Components:
     []
+- !<VFXComponent/95fef702-f717-4fb0-8964-c5fc894601df>
+  PrefabRemaps:
+    []
+  Name: VFX Component
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  VFXAsset: !<reference> fe14cf41-99ff-4c05-a940-f4954fa17302
 - !<SceneObject/974e2072-cd2a-4664-8d91-d71bbcd60d54>
   PrefabRemaps:
     []
@@ -2962,9 +4347,9 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 154.254242, z: -147.500000}
+    Position: {x: 38.375954, y: 33.351383, z: -127.414688}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 3.125000, y: 3.125000, z: 3.125000}
+    Scale: {x: 8.000000, y: 8.000000, z: 8.000000}
     HasSegmentScaleCompensation: false
   Children:
     []
@@ -2989,7 +4374,7 @@
   PrefabRemaps:
     []
   Name: Reset Button
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -39.561684, y: -66.367996, z: -147.598694}
@@ -3055,7 +4440,7 @@
       textButton: !<MappingBased.AssignableType_2> 276d41a3-d521-4260-a25c-70f7fe736400
       welcomeText: !<reference.Text> ebaf432b-569e-4433-80ee-f4edeef5e5d0
       toolTip: !<reference.Text> 9b4695ca-d297-4911-8f79-a762991dafc8
-      pinchServiceTemplate: !<reference.SceneObject> 081e00cf-1be1-41d1-8b12-fab3ba80215b
+      pinchServiceTemplate: !<MappingBased.AssignableType_3> 59e8014d-e00b-4673-a1da-7b6dc2f37050
       singleInstance: true
       verboseLogging: true
   ScriptTypes:
@@ -3148,6 +4533,16 @@
     - !<own> 9c6bdaf8-6f75-4c15-8f87-51a47efb49e9
   Components:
     []
+- !<LookAtComponent/af2821a6-15a0-4224-8028-ee29cc727d53>
+  PrefabRemaps:
+    []
+  Name: Look At
+  Enabled: true
+  LookAtMode: LookAtDirection
+  AimVectors: ZAimYUp
+  WorldUpVector: ObjectY
+  Target: !<reference> 00000000-0000-0065-0000-000000000064
+  OffsetRotation: {x: 0.000000, y: 0.000000, z: 0.000000}
 - !<AudioComponent/b02304ea-56f4-4ffe-8959-36b620935fc0>
   PrefabRemaps:
     []
@@ -3733,7 +5128,7 @@
       verboseLogging: true
       snap3DFactory: !<MappingBased.AssignableType_2> 4aa30a81-2a3a-4c2d-a9fa-30d11d91584f
       targetAnchor: !<reference.SceneObject> a5f401c0-ff6a-46d1-b13f-71899b187044
-      endControllerTemplate: !<reference.SceneObject> 02e91116-e831-439c-80a9-6f04c2598daf
+      endControllerTemplate: !<MappingBased.AssignableType_3> 67813818-d407-4ad5-b924-7b8f0eb1fb9b
       singleInstance: true
   ScriptTypes:
     "":
@@ -4451,7 +5846,7 @@
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Position: {x: 0.000000, y: 0.000000, z: 0.827879}
     Rotation: {x: -90.000000, y: -0.000000, z: -0.000000}
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
@@ -4474,6 +5869,8 @@
     []
   Components:
     - !<own> aa966680-5ffe-497f-b91c-959988128948
+    - !<own> 6f30b847-2333-4b5e-bf1e-e45c45f6d05f
+    - !<own> 0d2ee673-25f4-4df2-8f8a-2324ed31374e
 - !<SceneObject/f3921fac-eed0-4903-b843-c07d0ca03688>
   PrefabRemaps:
     []

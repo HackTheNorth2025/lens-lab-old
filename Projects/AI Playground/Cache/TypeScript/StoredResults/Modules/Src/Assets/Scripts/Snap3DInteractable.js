@@ -23,9 +23,9 @@ let Snap3DInteractable = class Snap3DInteractable extends BaseScriptComponent {
             .setLocalPosition(new vec3(0, -this.size * 0.5 - offsetBelow, 0));
         this.colliderObj.getTransform().setLocalScale(this.sizeVec);
         this.img.getTransform().setLocalScale(this.sizeVec);
+        this.promptDisplay.text = "";
     }
     setPrompt(prompt) {
-        this.promptDisplay.text = prompt;
     }
     setImage(image) {
         this.img.enabled = true;

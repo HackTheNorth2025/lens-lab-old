@@ -1,9 +1,12 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 726
+    size: 744
     values:
       - ""
+      - Behavior 2.lsc
+      - Behavior.lsc
+      - Entry
       - Entry/PinchDetector.ts
       - Entry/PinchService.ts
       - Fake 2D Fluids.lspkg/package.native
@@ -33,8 +36,10 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
+      - Modules
       - Modules/Camera Module.cameraModule
       - Modules/Internet Module.internetModule
+      - Prefabs
       - Prefabs/Snap3DInteractable.prefab
       - Remote Service Gateway.lspkg
       - Remote Service Gateway.lspkg/Helpers
@@ -98,6 +103,7 @@ CollapsedEntities:
       - Remote Service Gateway.lspkg/Utils/Event.ts
       - Remote Service Gateway.lspkg/Utils/Promisfy.ts
       - Remote Service Gateway.lspkg/package.native
+      - Render
       - Render/Device Camera Texture.deviceCameraTexture
       - Render/Echopark.hdr
       - Render/Echopark.hdr/Diffuse
@@ -112,6 +118,7 @@ CollapsedEntities:
       - Scene Manager.lspkg/Scripts/SceneManagerModule.js
       - Scene Manager.lspkg/package.native
       - Scene.scene
+      - Scripts
       - Scripts/AIAssistantUIBridge.ts
       - Scripts/APIKeyHint.ts
       - Scripts/ASRQueryController.ts
@@ -123,6 +130,13 @@ CollapsedEntities:
       - Scripts/OpenAIAssistant.ts
       - Scripts/Snap3DInteractable.ts
       - Scripts/SphereController.ts
+      - Sparkles VFX.lspkg
+      - Sparkles VFX.lspkg/SparklesVFX__PLACE_IN_SCENE.prefab
+      - Sparkles VFX.lspkg/Textures
+      - Sparkles VFX.lspkg/Textures/sparkles.png
+      - Sparkles VFX.lspkg/VFX 2.0
+      - Sparkles VFX.lspkg/VFX 2.0/sparkles_vfx.vfxgraph
+      - Sparkles VFX.lspkg/package.native
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerEndAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Materials
@@ -725,8 +739,12 @@ CollapsedEntities:
       - Visuals/Textures/NoInternetAlert.png
       - Visuals/Textures/NoInternetWarning.mat
       - Visuals/image_unlit.ss_graph
+      - _Hack
       - _Hack/End.ts
       - _Hack/GeminiPromptRefiner.ts
       - _Hack/Start.ts
       - _Hack/original.jpg
+      - bubble_pop.mp3
+      - bugbite.mp3
+      - interaction.mp3
   options: 4
