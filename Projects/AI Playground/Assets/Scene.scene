@@ -11,6 +11,8 @@
     - !<own> 7670d219-b207-4fd8-9c32-9678d5e6e5ac
     - !<own> 30a790eb-93f6-4e15-91a1-3c52d95ee3fa
     - !<own> fa218975-083f-4938-9a44-7c80b28abff0
+    - !<own> f3921fac-eed0-4903-b843-c07d0ca03688
+    - !<own> 0285209e-2ecf-41bc-8f1c-9fb8d0f2e97e
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -96,6 +98,21 @@
     - !<own> 8b1597e7-0f83-4295-a17b-d12cd299f954
   Components:
     []
+- !<SceneObject/0285209e-2ecf-41bc-8f1c-9fb8d0f2e97e>
+  PrefabRemaps:
+    []
+  Name: PinchService
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 59e8014d-e00b-4673-a1da-7b6dc2f37050
 - !<Image/030a9acb-4fca-4732-bb78-9c78865a9269>
   PrefabRemaps:
     []
@@ -710,6 +727,22 @@
     []
   Components:
     []
+- !<ScriptComponent/1ac6d988-0215-45e2-b20c-bfbbc397794e>
+  PrefabRemaps:
+    []
+  Name: PinchDetector
+  Enabled: true
+  ScriptAsset: !<reference> c3d45d8b-dbe3-44f9-8737-e9c54bf94d7e
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      pinchService: !<MappingBased.AssignableType> 59e8014d-e00b-4673-a1da-7b6dc2f37050
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/1b55a799-781e-4c9b-a064-753ddee7112d>
   PrefabRemaps:
     []
@@ -2541,6 +2574,23 @@
     CapitalizationOverride: None
   DepthTest: true
   TwoSided: false
+- !<ScriptComponent/59e8014d-e00b-4673-a1da-7b6dc2f37050>
+  PrefabRemaps:
+    []
+  Name: PinchService
+  Enabled: true
+  ScriptAsset: !<reference> 987ddbb9-a94f-4db7-8acc-03d5c47bf627
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      cameraModule: !<reference.CameraModule> 54f9e8d0-5df0-455c-8795-55135765cad6
+      gemini: !<MappingBased.AssignableType> ccde828a-40d8-43c1-8b5f-affe3945273d
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/5a2ca1a2-f292-4079-aebb-f491bb9f5bf5>
   PrefabRemaps:
     []
@@ -5541,23 +5591,19 @@
   ScriptAsset: !<reference> 3a235bfd-9155-48eb-a2c4-e188fbec03cd
   ScriptInputsDefault:
     modelStyle: true
-    detailLevel: true
     includeTechnicalSpecs: true
-    includeMaterials: true
-    includeLighting: true
     verboseLogging: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      inputTexture: !<reference.Texture> 12aaadb7-903f-40f6-8876-163cede0d939
       analyzeButton: !<MappingBased.AssignableType> 2755eaaf-ef93-45dc-b460-e2b3836517a4
       imageDisplay: !<reference.Image> 030a9acb-4fca-4732-bb78-9c78865a9269
       modelStyle: realistic
-      detailLevel: !<float> 4.000000
+      detailLevel: !<float> 2.000000
       includeTechnicalSpecs: true
-      includeMaterials: true
-      includeLighting: true
+      includeMaterials: false
+      includeLighting: false
       promptDisplay: !<reference.Text> 9b4695ca-d297-4911-8f79-a762991dafc8
       verboseLogging: true
   ScriptTypes:
@@ -6359,6 +6405,21 @@
     CapitalizationOverride: None
   DepthTest: false
   TwoSided: false
+- !<SceneObject/f3921fac-eed0-4903-b843-c07d0ca03688>
+  PrefabRemaps:
+    []
+  Name: PinchDetector
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 1ac6d988-0215-45e2-b20c-bfbbc397794e
 - !<Text/f3dce95d-ac58-4439-96e8-696b57643f1e>
   PrefabRemaps:
     []

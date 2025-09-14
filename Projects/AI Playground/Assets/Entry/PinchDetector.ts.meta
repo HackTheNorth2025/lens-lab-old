@@ -1,0 +1,41 @@
+- !<AssetImportMetadata/3f07220f-b3b0-4ef2-bfc8-d077599f888e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c3d45d8b-dbe3-44f9-8737-e9c54bf94d7e
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c3d45d8b-dbe3-44f9-8737-e9c54bf94d7e
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 9257ffde-4169-46fa-ac81-5b7ff606c72b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/9257ffde-4169-46fa-ac81-5b7ff606c72b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: ffb5e582-a1e9-4d27-9e95-42c672196e9f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    pinchService: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - pinchService: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input AssignableType pinchService

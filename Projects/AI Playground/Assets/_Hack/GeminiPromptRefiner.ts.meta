@@ -33,7 +33,6 @@
     includeLighting: false
     includeMaterials: false
     includeTechnicalSpecs: false
-    inputTexture: false
     modelStyle: false
     promptDisplay: false
     verboseLogging: false
@@ -42,8 +41,7 @@
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
   DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
   DefaultScriptInputs:
-    - inputTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
-      analyzeButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+    - analyzeButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       imageDisplay: !<reference.Image> 00000000-0000-0000-0000-000000000000
       modelStyle: realistic
       detailLevel: !<float> 4.000000
@@ -60,7 +58,6 @@
     - '// @ui {"widget":"label", "label":"Gemini Image-to-3D Prompt Refiner"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Input Configuration"}'
-    - '// @input Asset.Texture inputTexture {"hint":"Drag and drop a texture here to analyze"}'
     - '// @input AssignableType analyzeButton {"hint":"Button to trigger the image analysis"}'
     - '// @input Component.Image imageDisplay {"hint":"Optional: Display the input image for reference"}'
     - '// @ui {"widget":"group_end"}'

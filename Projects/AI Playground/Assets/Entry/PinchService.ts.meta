@@ -1,0 +1,44 @@
+- !<AssetImportMetadata/1a876848-30a4-4408-b1dc-8aa742ce6ca8>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 987ddbb9-a94f-4db7-8acc-03d5c47bf627
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 987ddbb9-a94f-4db7-8acc-03d5c47bf627
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 784f60e5-463f-4c29-b9f2-eeeec2bdf4ca
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/784f60e5-463f-4c29-b9f2-eeeec2bdf4ca>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: a2898028-7a5e-4bdf-a329-f81ba84db828
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  CurrentVisibility: Editable
+  MaxVisibility: Editable
+  ScriptInputsHidden:
+    cameraModule: false
+    gemini: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  DefaultScriptInputs:
+    - cameraModule: !<reference.CameraModule> 00000000-0000-0000-0000-000000000000
+      gemini: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.CameraModule cameraModule
+    - // @input AssignableType gemini

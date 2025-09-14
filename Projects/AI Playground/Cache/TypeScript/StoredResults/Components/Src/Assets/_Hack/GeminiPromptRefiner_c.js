@@ -16,7 +16,6 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"label", "label":"Gemini Image-to-3D Prompt Refiner"}
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"Input Configuration"}
-// @input Asset.Texture inputTexture {"hint":"Drag and drop a texture here to analyze"}
 // @input AssignableType analyzeButton {"hint":"Button to trigger the image analysis"}
 // @input Component.Image imageDisplay {"hint":"Optional: Display the input image for reference"}
 // @ui {"widget":"group_end"}
@@ -48,7 +47,6 @@ Object.setPrototypeOf(script, Module.GeminiPromptRefiner.prototype);
 script.__initialize();
 let awakeEvent = script.createEvent("OnAwakeEvent");
 awakeEvent.bind(() => {
-    checkUndefined("inputTexture", []);
     checkUndefined("analyzeButton", []);
     checkUndefined("imageDisplay", []);
     checkUndefined("modelStyle", []);

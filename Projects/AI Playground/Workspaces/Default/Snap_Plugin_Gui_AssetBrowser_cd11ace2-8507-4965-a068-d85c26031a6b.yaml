@@ -1,9 +1,11 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 718
+    size: 722
     values:
       - ""
+      - Entry/PinchDetector.ts
+      - Entry/PinchService.ts
       - Image.mat
       - LSTween.lspkg
       - LSTween.lspkg/Examples
@@ -30,6 +32,8 @@ CollapsedEntities:
       - LSTween.lspkg/TweenJS/Version.ts
       - LSTween.lspkg/TweenJS/mainGroup.ts
       - LSTween.lspkg/package.native
+      - Modules/Camera Module.cameraModule
+      - Modules/Internet Module.internetModule
       - Prefabs
       - Prefabs/Snap3DInteractable.prefab
       - Remote Service Gateway.lspkg/Helpers

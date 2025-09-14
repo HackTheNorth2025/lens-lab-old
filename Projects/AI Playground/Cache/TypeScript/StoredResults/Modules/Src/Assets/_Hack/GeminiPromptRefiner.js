@@ -125,7 +125,7 @@ Your generated prompt should:
 Focus on creating a prompt that would result in a high-quality 3D model that closely matches the input image.`;
     }
     createUserPrompt() {
-        let prompt = "Analyze this image and generate a detailed 3D model generation prompt. ";
+        let prompt = "Analyze this image and generate a detailed 3D model generation prompt. Focus on the most prominent character or object in view; especially if it is a cartoon or other artwork character. ";
         if (this.includeTechnicalSpecs) {
             prompt +=
                 "Include technical specifications like polygon count, topology, and geometric details. ";

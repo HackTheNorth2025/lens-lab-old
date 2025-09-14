@@ -12,9 +12,8 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   @ui.label("Gemini Image-to-3D Prompt Refiner")
   @ui.separator
   @ui.group_start("Input Configuration")
-  @input
-  @hint("Drag and drop a texture here to analyze")
-  private inputTexture: Texture;
+    
+  inputTexture: Texture;
 
   @input
   @hint("Button to trigger the image analysis")
@@ -66,7 +65,7 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
   @hint("Show detailed analysis in console logs")
   private verboseLogging: boolean = true;
   @ui.group_end
-  private isProcessing: boolean = false;
+  public isProcessing: boolean = false;
 
   onAwake() {
     this.createEvent("OnStartEvent").bind(() => {
@@ -86,7 +85,7 @@ export class GeminiPromptRefiner extends BaseScriptComponent {
     });
   }
 
-  private setupImageDisplay() {
+  public setupImageDisplay() {
     if (this.imageDisplay && this.inputTexture) {
       this.imageDisplay.mainMaterial.mainPass.baseTex = this.inputTexture;
     }
@@ -196,7 +195,7 @@ Focus on creating a prompt that would result in a high-quality 3D model that clo
 
   private createUserPrompt(): string {
     let prompt =
-      "Analyze this image and generate a detailed 3D model generation prompt. ";
+      "Analyze this image and generate a detailed 3D model generation prompt. Focus on the most prominent character or object in view; especially if it is a cartoon or other artwork character. ";
 
     if (this.includeTechnicalSpecs) {
       prompt +=

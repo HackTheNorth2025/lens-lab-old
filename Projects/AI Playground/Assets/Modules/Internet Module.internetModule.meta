@@ -1,0 +1,16 @@
+- !<AssetImportMetadata/b87faa1c-d7aa-4000-9852-e52ce337d3bc>
+  ImportedAssetIds:
+    InternetModule: !<reference> 99538c24-dc8e-42cb-8aca-07e5a83858ce
+  ImporterName: InternetModuleImporter
+  PrimaryAsset: !<reference> 99538c24-dc8e-42cb-8aca-07e5a83858ce
+  PackageType: NotAPackage
+  PackagePolicy: CannotBeUnpacked
+  ExtraData:
+    {}
+  AssetDataMap:
+    {}
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
