@@ -23,18 +23,18 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
         });
     }
     initializeButton() {
-        if (!this.analyzeButton) {
+        if (!this.imageButton) {
             log.e("Analyze button not assigned!");
             return;
         }
-        this.analyzeButton.onInteractorTriggerStart((event) => {
+        this.imageButton.onInteractorTriggerStart((event) => {
             this.analyzeImage(false);
         });
-        if (!this.analyzeTextButton) {
+        if (!this.textButton) {
             log.e("Text button not assigned!");
             return;
         }
-        this.analyzeTextButton.onInteractorTriggerStart((event) => {
+        this.textButton.onInteractorTriggerStart((event) => {
             this.analyzeImage(true);
         });
     }
@@ -53,11 +53,11 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
         }
         if (!this.inputTexture) {
             log.e("No input texture assigned!");
-            this.updatePromptDisplay("Error: No input texture assigned");
+            // this.updatePromptDisplay("Error: No input texture assigned");
             return;
         }
         this.isProcessing = true;
-        this.updatePromptDisplay("Analyzing image...");
+        // this.updatePromptDisplay("Analyzing image...");
         this.generatePromptFromImage(flag);
     }
     generatePromptFromImage(flag) {
@@ -96,14 +96,14 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
         })
             .catch((error) => {
             log.e("Gemini process failed: " + error);
-            this.updatePromptDisplay("Error: " + error);
+            // this.updatePromptDisplay("Error: " + error);
             this.isProcessing = false;
         });
     }
     handleGeminiResponse(response) {
         if (response.candidates && response.candidates.length > 0) {
             const generatedPrompt = response.candidates[0].content.parts[0].text.trim();
-            this.updatePromptDisplay(generatedPrompt);
+            // this.updatePromptDisplay(generatedPrompt);
             // 🔹 Log to console
             log.i("Generated Keywords: " + generatedPrompt);
             // 🔹 Create the 3D object
@@ -117,7 +117,7 @@ let GeminiPromptRefiner = class GeminiPromptRefiner extends BaseScriptComponent 
         }
         else {
             log.e("No valid response from Gemini");
-            this.updatePromptDisplay("Error: No response from Gemini");
+            // this.updatePromptDisplay("Error: No response from Gemini");
         }
         this.isProcessing = false;
     }
@@ -158,12 +158,12 @@ Do NOT describe any objects in the background of the image, but you are allowed 
     // ----------------------------------------------------------------------
     // Utilities
     // ----------------------------------------------------------------------
-    updatePromptDisplay(text) {
-        if (this.promptDisplay) {
-            this.promptDisplay.text = text;
-        }
-        print("=== GENERATED KEYWORDS/PHRASES ===\n" + text + "\n===========================");
-    }
+    // private updatePromptDisplay(text: string) {
+    //   if (this.promptDisplay) {
+    //     this.promptDisplay.text = text;
+    //   }
+    //   print("=== GENERATED KEYWORDS/PHRASES ===\n" + text + "\n===========================");
+    // }
     textureToBase64(texture) {
         return new Promise((resolve, reject) => {
             if (!texture) {

@@ -17,8 +17,8 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"Input Configuration"}
 // @input Asset.Texture inputTexture
-// @input AssignableType analyzeButton {"hint":"Button to trigger the image analysis"}
-// @input AssignableType_1 analyzeTextButton {"hint":"Button to trigger the text analysis"}
+// @input AssignableType imageButton {"hint":"Button to trigger the image analysis"}
+// @input AssignableType_1 textButton {"hint":"Button to trigger the text analysis"}
 // @input Component.Image imageDisplay {"hint":"Optional: Display the input image for reference"}
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
@@ -27,7 +27,6 @@ function checkUndefined(property, showIfData){
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
 // @ui {"widget":"group_start", "label":"Output Configuration"}
-// @input Component.Text promptDisplay
 // @input bool verboseLogging = true
 // @ui {"widget":"group_end"}
 // @ui {"widget":"separator"}
@@ -51,11 +50,10 @@ script.__initialize();
 let awakeEvent = script.createEvent("OnAwakeEvent");
 awakeEvent.bind(() => {
     checkUndefined("inputTexture", []);
-    checkUndefined("analyzeButton", []);
-    checkUndefined("analyzeTextButton", []);
+    checkUndefined("imageButton", []);
+    checkUndefined("textButton", []);
     checkUndefined("imageDisplay", []);
     checkUndefined("modelStyle", []);
-    checkUndefined("promptDisplay", []);
     checkUndefined("verboseLogging", []);
     checkUndefined("snap3DFactory", []);
     checkUndefined("targetAnchor", []);

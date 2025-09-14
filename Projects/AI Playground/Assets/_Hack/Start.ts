@@ -13,10 +13,20 @@ export class StartSceneController extends BaseScriptComponent {
   @input
   @hint("Button the user presses to start the experience")
   private startButton: Interactable;
+  @input
+  @hint("Button for image interaction")
+  private imageButton: Interactable;
+  @input
+  @hint("Button for text interaction")
+  private textButton: Interactable;
 
   @input
   @hint("Welcome / intro text that will be cleared after start")
   private welcomeText: Text;
+
+  @input
+  @hint("Welcome / intro text that will be cleared after start")
+  private toolTip: Text;
   @ui.group_end
 
   @ui.separator
@@ -45,6 +55,7 @@ export class StartSceneController extends BaseScriptComponent {
     this.createEvent("OnStartEvent").bind(() => {
       this.captureDefaultState();
       this.initializeButton();
+      this.hideImageAndTextButtons(); // Ensure hidden at startup
       this.resetUI();
       if (this.verboseLogging) {
         log.i("Start scene initialized");
@@ -72,6 +83,18 @@ export class StartSceneController extends BaseScriptComponent {
     });
   }
 
+  private hideImageAndTextButtons() {
+    if (this.imageButton && this.imageButton.getSceneObject) {
+      this.imageButton.getSceneObject().enabled = false;
+    }
+    if (this.textButton && this.textButton.getSceneObject) {
+      this.textButton.getSceneObject().enabled = false;
+    }
+    if (this.toolTip) {
+    this.toolTip.enabled = false;
+    }
+  }
+
   // ----------------------------------------------------------------------
   // Start Flow
   // ----------------------------------------------------------------------
@@ -95,6 +118,9 @@ export class StartSceneController extends BaseScriptComponent {
 
     // 3. Hide start button
     this.showStartButton(false);
+
+    // 4. Show image and text buttons
+    this.showButtons(true);
 
     if (this.verboseLogging) {
       log.i("Experience started: pinch service ready, UI updated.");
@@ -160,6 +186,7 @@ export class StartSceneController extends BaseScriptComponent {
       this.welcomeText.text = this.defaultWelcomeText;
     }
     this.showStartButton(true);
+    this.showButtons(false);
   }
 
   private showStartButton(visible: boolean) {
@@ -175,6 +202,18 @@ export class StartSceneController extends BaseScriptComponent {
       }
     } catch (e) {
       log.e("Failed to toggle start button visibility: " + e);
+    }
+  }
+
+  private showButtons(visible: boolean) {
+    if (this.imageButton && this.imageButton.getSceneObject) {
+      this.imageButton.getSceneObject().enabled = visible;
+    }
+    if (this.textButton && this.textButton.getSceneObject) {
+      this.textButton.getSceneObject().enabled = visible;
+    }
+    if (this.toolTip) {
+      this.toolTip.enabled = visible;
     }
   }
 }

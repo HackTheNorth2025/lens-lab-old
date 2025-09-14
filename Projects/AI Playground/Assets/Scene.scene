@@ -3016,7 +3016,7 @@
     "":
       startButton: !<MappingBased.AssignableType> d1afcb99-bd12-42d4-a235-c304b4d6d477
       welcomeText: !<reference.Text> ebaf432b-569e-4433-80ee-f4edeef5e5d0
-      pinchServiceTemplate: !<reference.SceneObject> 0285209e-2ecf-41bc-8f1c-9fb8d0f2e97e
+      pinchServiceTemplate: !<reference.SceneObject> 081e00cf-1be1-41d1-8b12-fab3ba80215b
       singleInstance: true
       verboseLogging: true
   ScriptTypes:
@@ -3686,8 +3686,8 @@
   ScriptInputs:
     "":
       inputTexture: !<reference.Texture> 996c6f4e-b2ad-4117-9e3e-3db82e6e97f5
-      analyzeButton: !<MappingBased.AssignableType> 2755eaaf-ef93-45dc-b460-e2b3836517a4
-      analyzeTextButton: !<MappingBased.AssignableType_1> 276d41a3-d521-4260-a25c-70f7fe736400
+      imageButton: !<MappingBased.AssignableType> 2755eaaf-ef93-45dc-b460-e2b3836517a4
+      textButton: !<MappingBased.AssignableType_1> 276d41a3-d521-4260-a25c-70f7fe736400
       imageDisplay: !<reference.Image> 030a9acb-4fca-4732-bb78-9c78865a9269
       modelStyle: realistic
       promptDisplay: !<reference.Text> 9b4695ca-d297-4911-8f79-a762991dafc8
